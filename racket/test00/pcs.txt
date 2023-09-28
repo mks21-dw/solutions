@@ -1,0 +1,442 @@
+
+=======================
+Question 0:
+Write a function that tells you weather
+two variables are within five integers of each other
+
+Possible solution:
+=======================
+Question 1:
+Programming question: Write a function that is the volume of a cylinder given radius and height
+Possible solution:
+=======================
+Question 2:
+Programming question: Write a program that runs the quadratic function into Racket code
+
+Possible solution:
+=======================
+Question 3:
+Programming question: Write a program that runs the quadratic formula.
+-b +- square root of b^2 + 4ac divded by 2a (hopefully this makes sense)
+
+Possible solution
+=======================
+Question 4:
+Programming question: Write the slope of two points.
+Slope = (y2-y1)/(x2-x1)
+
+
+Possible solution:
+=======================
+Question 5:
+Progamming question: Write a function that
+takes 2 numbers and returns true if
+the first number is divisible by the second number
+and return false otherwise.
+
+Possible solution:
+=======================
+Question 6:
+Programming question:
+Write a function that returns the volume of a cone given base b and height h.
+Volume of a cone = bh1/3
+
+Possible solution:
+=======================
+Question 7:
+Programming question:
+Write a program "areaofhexagon" for the area of a hexagon
+(Area=((3√3)/2)a^2)
+Possible solution:
+(define areaofhexagon (lambda (a)
+(* (/ (* 3 (sqrt 3)) 2) (* a a))))
+=======================
+Question 8:
+MC Question:
+What is "lambda" in DrRacket?
+Options:
+A) Used for creating anonymous functions; "Function making function"
+B) A mathematical operator
+C) Used for printing text
+D) An identifier
+
+
+Answer: A
+=======================
+Question 9:
+Programming Question:
+Write a code for that represents percentage error. The formula is displayed below:
+(measured - accepted)/accepted * 100
+
+Possible solution:
+(define %Error
+(lambda (measured accepted)
+  (* 100
+     (/ (- measured accepted) accepted))))
+=======================
+Question 10:
+Programming Question:
+Write a function to evaluate the volume of a cone, given the radius and height as inputs.
+Volume of a Cone: 1/3 * pi * r^2 * h
+Possible Solution:
+=======================
+Question 11:
+Programming Question:
+Write a code for the percentage error formula. The formula is displayed below.
+((measured-accepted)/accepted)*100%
+
+Possible solution:
+(define %Err
+(lambda (measured accepted)
+(* 100 (/ accepted (- measured accepted)))))
+=======================
+Question 12:
+Programming Question: Write a function that returns the volume of a cylinder, given its height and radius.
+Possible Solution:
+=======================
+Question 13:
+(define between
+  (lambda (x)
+	(and)
+	(and (> x 1) (< x 100))
+	(and (> x 1000) (< x 10000)))
+=======================
+Question 14:
+Programming question: Write a function that finds the interior angle measure of any polygon.
+PolyIntAngle=(180(n-2))/n
+
+Possible Solution:
+=======================
+Question 15:
+MC Question: What output would I recieve from this function when I input (schoolHours 
+
+(define schoolHours ( - 24 ( + arrive depart))
+
+
+
+
+#|
+Programming question:
+Create a function called Quadratic. 
+This function should allow the user to calculate the numeric value of x by inputing the values of a, b, and c. 
+Expect the user input to be real numbers.
+
+Quadratic Formula (for reference)
+x = (-b±√(b²-4ac))/(2a)
+=======================
+Question 16:
+Programming Question:
+Write a function that takes the radius and height of a
+cylinder and returns the volume.
+
+Possible solution:
+(define CylVol
+   (lambda (r h)
+       (* h (* pi (expt r 2)))))
+=======================
+Question 17:
+Programming question:
+Write a program "areaofhexagon" for the area of a hexagon
+(Area=((3√3)/2)a^2)
+Possible solution:
+(define areaofhexagon 
+  (lambda (a)
+    (* (/ (* 3 (sqrt 3)) 2) (* a a))))
+=======================
+Question 18:
+Programming question:
+Write a function that takes in 5 grades and calculates the averageof them.
+
+Possible solution:
+=======================
+Question 19:
+Programming question:
+Write a function that has three parameters a, b, c and checks whether (a+b)/c is greater than c, returning true if it is and false in all other cases.
+
+Possible solution:
+=======================
+Question 20:
+Programming question:
+Craete a function called Quadratic.
+This function should allow the user to calulate the numeric value of x by inputing the values of a, b, and c.
+Expect the user input to be real numbers.
+
+Quadratic Formula (for reference)
+x = ( -b ± √( b^2 - 4ac ) ) / ( 2a
+=======================
+Question 21:
+Programming question:
+Write a function that takes in area of a square
+and returns its side length.
+
+Possible solution:
+=======================
+Question 22:
+Programming question:
+Write a function that takes 5 grades and returns the average
+
+Possible solution:
+
+(define avg
+  (lambda a b c d e)
+  (/ (+ a b c d e) 5)
+=======================
+Question 23:
+Programming question:
+Write a function that takes two numbers and returns true if the first number is
+divisle by the second number, otherwise false;
+
+Possible solution:
+=======================
+Question 24:
+Programming question:
+Write a function that has three parameters a, b, and c and checks whether (a+b)/c is greater than c, returning true if its is and false in all other cases
+
+Possible solution:
+=======================
+Question 25:
+Programming Question:
+Write a function that takes the radius and height of a cylinder and returns the volume of the cylinder.
+
+Possible solution:
+(define CylVol
+ (lambda (r h)
+  (* h (* pi (expt r 2)))))
+=======================
+Question 26:
+Programming Quetion:
+Write a Racket function (PolygonIntAngle) that provides the interior angle measure of any regular polygon
+
+Description:
+Formula - Interior Angle Measure = (180 * (n - 2))/n
+n - the number of sides in the regular polygon
+
+Possible Solution:
+=======================
+Question 27:
+Programming question:
+Write a function that finds the volume of a cone given the base and height.
+
+Volume of cone: (base x height)/3
+
+
+Possible solution:
+=======================
+Question 28:
+Programming question:
+Write a function that calculates the volume of a sphere when diameter is given.
+
+Possible solution:
+=======================
+Question 29:
+Programming question:
+Write a function to determine the volume of a cone. Volume of a cone = 1/3 pi r^2 h 
+
+Possible solution:
+(define areaCone 
+  (lambda (r h)
+    (* (/ 1 3) pi h (expt r 2))))
+=======================
+Question 30:
+Programming question: Create a function named "velocity" that finds the velocity of a moving object given the values of "distance" and "time"
+
+Description: Use this equation to write your program: v=d/t (velocity is equal to distance over time)
+
+Possible solution:
+=======================
+Question 31:
+Programming question: Write a function to find the circumference of a circle given its radius.
+circumference = 2(pi)(r) 
+
+Possible solution:
+=======================
+Question 32:
+Programming question:
+Write a function fillTime to find the time in seconds it takes to fill a pool with dimensions x y z in meters
+given the pool is being filled with water at a rate of 2 cubic meters per minute
+
+Possible solution:
+(define fillTime
+  (lambda (x y z)
+    (*
+     (/
+      (* x y z)
+      2)
+    60)
+    ))
+=======================
+Question 33:
+Programming question: Write a function to determine the volume of a cone
+volume = 1/3 pi r^2 h
+
+Possible solution:
+=======================
+Question 34:
+Programming question:
+Description
+Write a function that takes the volume of a cube and returns its surface area.
+
+Possible solution:
+=======================
+Question 35:
+Programming question:
+Write a function that takes the radius of a sphere and returns it's surface area.
+surface area: 4*pi*r^2
+
+Possible solution:
+=======================
+Question 36:
+Programming question:
+Write a function that calculates the radius of the base of a cone from the volume and height.
+
+
+Possible solution:
+#|
+(define radiusfromvolumeandheight (lambda (volume height)
+(sqrt 
+(/ pi
+(/ height 
+(* 3 volume))))))
+=======================
+Question 37:
+;Acceptable Solutions
+
+(define volCyl (lambda (d h)
+                 (* h
+                  (expt
+                  (* pi (/ d 2)) 2))))
+
+(volCyl 2 1
+=======================
+Question 38:
+Programming question: Write a function that takes the mass(m) and volume(V) of a shape and returns its density
+Possible solution:
+=======================
+Question 39:
+Programming question:
+Write a function that returns:
+#t #t --> #t
+#t #f --> #t
+#f #t --> #f
+#f #f --> #f
+
+Possible solution:
+=======================
+Question 40:
+Programming Question: Write a program that finds the area of a cylinder using the radius and height.
+Area of a cylinder: 2(pi)r^2 + 2(pi)rh
+
+Possible Solution:
+=======================
+Question 41:
+Programming question:
+Write a function to find the circumference of a circle given its radius 
+Circumference: 2 * (pi) * r (where r is the radius)
+
+Possible solution:
+=======================
+Question 42:
+Programming question:
+Write a function that takes the values of a quadratic equation
+(in the form of ax^2+bx+c=0) and returns the minimum value of x
+
+Possible solution:
+=======================
+Question 43:
+Programming question:
+Write a function that will take the radius of a sphere and return the sphere's surface area.
+surface area: 4*pi*r^2
+
+Possible solution:
+=======================
+Question 44:
+Programming Question
+Write a program that factors (a+b)^2 (given a and b are any numbers) using FOIL method only
+Possible solution:
+(define factor (lambda (a b) (+ (* a a)(* a b)(* a b) (* b b))))
+=======================
+Question 45:
+Programming question:
+Write a function that takes the area of a trapezoid and returns its height. 
+Area of trapezoid = (a+b)*h/2
+
+Possible solution:
+=======================
+Question 46:
+Programming question:
+Write a function that takes the volume of a cube and returns its surface area.
+
+Possible solution:
+=======================
+Question 47:
+ang racket
+;MC QUESTION: What is "lambda" used for?
+;OPTIONS:
+;1. To create a function
+;2. To compare functions
+;3. To determine whether a function is true or false
+;4. None of the above
+;ANSWER: 1
+
+;PROGRAMMING QUESTION: Create a function called "velocity"
+;that finds the velocity of a moving object given the distance and time of the object.
+;Use this formula: Velocity = Distance/Time
+;POSSIBLE SOLUTION:
+(define velocity
+  (lambda (distance time)
+    (/ distance time))
+=======================
+Question 48:
+Programming question:
+Write a function that calculates the sphere of a cube when the diameter is given..
+volume = 4/3 pi r^3
+
+Possible solution:
+=======================
+Question 49:
+Programming question: Write a program that factors (a+b)^2 (given a and b are any numbers) using FOIL method only
+Possible solution: (define factor (lambda (a b) (+ (* a a) (* a b) (* a b) (* b b))))
+=======================
+Question 50:
+
+=======================
+Question 51:
+Progarmming question:
+Write a function fillTime to find the time, in seconds, it takes to fill a pool with dimensions
+x y z given the pool is being filled with water at a rate of 2 cubic meters per minute.
+
+Possible solution:
+
+(define fillTime
+  (lambda (x y z)
+    (* 60 (/ (* x y z) 2))))
+=======================
+Question 52:
+Programming question:
+In the year 0, a stock is worth $100.
+The stock becomes worth 50% more the following year. Then, in year two, the stock
+drops 10%. In year three, it rises 50% again ...
+Given this pattern (rise 50%, drop by 10%), find a function that determines
+price of the stock in year n (does not need to be rounded, and assume that valid inputs -- namely any nonnegative integer -- is inputted).
+Description
+
+Possible solution:
+=======================
+Question 53:
+Programming question
+=======================
+Question 54:
+Programming question:
+Find the area of an equilateral triangle given the side length of your choice.
+Area formula for equilateral triangle is: (a^2*square root 3)/4
+Possible of solution:
+=======================
+Question 55:
+Programming question:
+Write a function that takes the mass (m) and volume (V) of a shape and returns its density
+
+Possible solution:
+=======================
+Question 56:
+(define EqualTriArea (lambda (side) (/ (* side side (sqrt 3)) 4)))
+(EqualTriArea 2

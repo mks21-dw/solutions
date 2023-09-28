@@ -1,0 +1,602 @@
+
+=======================
+Question 0:
+MC Question:
+Which code would output #t given the imputs 10 and 5 in that order?
+Options:
+A) (lambda (a b)
+     (and (< a 11) (> b 6)))
+B) (lambda (a b)
+     (or (not (= a 10)) (< 8 (* b 2))))
+C) (lambda (a b)
+     (not (or (< a 10) (<= b 5))))
+D) (lambda (a b)
+     (or (< 10 (quotient a 2)) (= 5 (* b 0.05)))
+
+Answer: B
+=======================
+Question 1:
+MC Question: How would you tell Racket to write 8 * 7?
+Options:
+A) (8 * 7)
+B) 8*7
+C) (x 7 8)
+D) (* 8 7)
+Answer: D
+=======================
+Question 2:
+MC Question: What function creates other functions?
+Options: define, lambda, exor, function
+Answer: lambda
+=======================
+Question 3:
+MC Question:What function creates other functions?
+Options:
+a) define
+b) lambda
+c) exor
+d) function
+Answer: b) lambda
+=======================
+Question 4:
+MC Question:
+What is "lambda" in DrRacket?
+Options:
+A) Used for creating anonymous functions; "Function making function"
+B) A mathematical operator
+C) Used for printing text
+D) An identifier
+
+
+Answer: A
+=======================
+Question 5:
+MC Question: Which of the following is not a good example of a function name?
+Options:
+A) circleAreaFromRadius
+B) mathfunction
+C) radiusFromDiameter
+D) cubeVolumeFromSide
+Answer: B
+=======================
+Question 6:
+MC Question:
+Which is not a Boolean function?
+Options:
+a) and
+b) so
+c) not
+d) or
+Answer b
+=======================
+Question 7:
+MC Question: Which one of these will return #t?
+Options:
+A) (> 1 2 3 4)
+B) (and #t #f)
+C) (>= (quotient 10 5) (remainder 5 3))
+D) (or (and #f #t) (and # t #f))
+Answer: C
+=======================
+Question 8:
+Programming question: Write the slope of two points.
+Slope = (y2-y1)/(x2-x1)
+
+
+Possible solution:
+=======================
+Question 9:
+MC Question:
+What is wrong with the code?
+(+ 5 (* 4 (- 7 5))
+Options:
+A) The + 5 is not closed with brackets
+B) The multiplication sign is in the wrong place
+C) The subtraction sign is in the wrong place
+D) There is an unneeded ')'
+=======================
+Question 10:
+MC Question:
+Which of the following is not a boolean function?
+Options:
+A) and
+B) or
+C) so
+D) not
+Answer:
+C) so
+=======================
+Question 11:
+MC Question:
+Which of the following is the correct code for (3/4)(4/3)
+Options:
+A) (3/4)(4/3)
+B) (* (/ 3 4) (/ 4 3)
+C) (* (/ 3 4) (/ 4 3))
+D) (/ 3 4) (/ 4 3)
+Answer: C
+=======================
+Question 12:
+MC Question: How would you tell Racket how to perform 8*7?
+Options:
+A) (8 * 7)
+B) 8*7
+C) x 7 8
+D) (* 8 7)
+Answer: D
+=======================
+Question 13:
+MC Question:
+Which one of these are NOT directly a part of Boolean values?
+Options:
+A) #t
+B) #f
+C) >=
+D) not
+
+Answer: C
+#|
+Programming question:
+How would you write the function "between" with it being between 1 and 100 OR between 1,000 and 10,000?
+
+Possible solution:
+=======================
+Question 14:
+MC Question:
+What is the correct way to write 5(1/2)^2 + 3/4
+Options:
+A) 5(1/2)^2 + 3/4
+B) (+ (* (expt (/ 1 2) 2) 5) (/ 3 4))
+C) (+ (* (expt (/ 2 1) 2) 5) (/ 4 3))
+D) (+(*(expt (/1 2) 2) 5)(/3 4))
+Answer: B
+=======================
+Question 15:
+MC Question:
+Options:
+Answer
+=======================
+Question 16:
+MC Question:
+How do you create a new function?
+
+Options:
+A) Define
+B) Lambda
+C) Create
+D) FunctionMaker
+
+Answer: B) Lambda
+=======================
+Question 17:
+MC Question: Which one of these will return #t?
+Options: 
+A) (> 1 2 3 4)
+B) (and #t #f)
+C) (>= (quotient 10 5) (remainder 5 3))
+D) (or (and #f #t) (and # t #f))
+Answer: C
+=======================
+Question 18:
+MC Question: Which of the following is not a boolean function?
+Options:
+A) and
+B) or
+C) expt
+D) exor
+Answer: C
+=======================
+Question 19:
+MC Question:
+By what notation does Racket organize functions?
+Options:
+A) Infix, such that function calls are placed before the arguments.
+B) Prefix, such that function calls are placed in between the arguments.
+C) Infix, such that function calls are placed in between the arguments.
+D) Prefix, such that function calls are placed before the arguments.
+Answer:
+=======================
+Question 20:
+MC Question:
+  
+Options:
+Answer
+=======================
+Question 21:
+MC question:
+what is 1+1?
+Options:
+A) 1
+B) 2
+C) window
+D) 3
+
+Answer: B
+=======================
+Question 22:
+MC Question: Which of the following is not a boolean function
+Options:
+A)and
+B)or
+C)expt
+D)exor
+Answer:C
+=======================
+Question 23:
+MC Question:
+Which of the following is not a good function name?
+Options:
+A) circleAreaFromRadius
+B) mathfunction
+C) radiusFromDiameter
+D) cubeVolumeFromSide
+
+Answer: B
+=======================
+Question 24:
+MC Question:
+By what notation does Racket organize functions?
+Options:
+A)Infix, such that function calls are placed before the arguments
+B)Prefix, such that function calls are placed in between the arguments
+C)Infix, such that function calls are placed in between the arguments
+D)Prefix, such that function calls are placed before the arguments
+Answer
+D)Prefix, such that function calls are placed before the arguments
+=======================
+Question 25:
+Multiple Choice Question:
+How do you create a new function?
+
+Options:
+A) Define
+B) Lambda
+C) Create
+D) FunctionMaker
+
+Answer: B) Lambda
+=======================
+Question 26:
+Multiple Choice Question:
+What's the correct Racket format for this arithmetic expression: 5(1/2)^2 + 3/4?
+
+Options:
+A - 5(1/2)^2 + 3/4 
+B - (+ (* (expt (/ 1 2) 2) 5) (/ 3 4))
+C - (+ (* (expt (/ 2 1) 2) 5) (/ 4 3))
+D - (+(*(expt(/12)2)5)(/34))
+
+Answer: B
+=======================
+Question 27:
+MC Question:
+Which of the following is not a boolean function.
+Options:
+A)And
+B)Or
+C)So
+D)Not
+Answer: C
+=======================
+Question 28:
+MC Question:
+What is literal data?
+
+Options:
+A) data that can potentially change while a program is running
+B) a series of functions
+C) a function with multiple values
+D) data that is exactly what it appears to be
+
+Answer: D
+=======================
+Question 29:
+MC Question:
+What is the correct way to show whether 4 is greater than x and x is less than 8?
+Option:
+A. (and (> 4 x) (> x 8))
+B. (and (> 4 x) (< x 8))
+C. (and (< 4 x) (< x 8))
+D. (and (< 4 x) (> x 8))
+Answer: B
+=======================
+Question 30:
+MC Question: What is "lambda" used for?
+Options:
+1. To determine whether a function is true or false
+2. To compare functions
+3. To create a function
+4. none of the above
+
+Answer
+=======================
+Question 31:
+MC Question: Which answer choice is an example of analog feedback?
+Options:
+A) The speedometer of a car
+B) The time on a smartwatch
+C) The weight on a digital scale
+D) The data store in a computer memory
+Answer: A
+=======================
+Question 32:
+MC Question:
+Characteristics of analog signals include:
+a) Continuous change
+b) Typically less accurate than digital signals
+c) Both a and b
+d) Neither a or b
+Answer: C
+=======================
+Question 33:
+MC Question:
+What is the correct function to show 4 is greater than x and x is less than 8?
+Options:
+A)(and (> 4 x) (> x 8))
+B)(and (> 4 x) (< x 8))
+C)(and (< 4 x) (< x 8))
+D)(and (< 4 x) (> x 8))
+
+Answer: B
+=======================
+Question 34:
+MC Question:Which of the following programs returns #t when the function is called?
+Options:
+A)(and (< 2 3) (= 5 7))
+B)(or (> 8 9) (and (= 4 6) (> 7 5)))
+C)(or (< 9 10) (= 8 5))
+D)all of the above
+Answer C
+=======================
+Question 35:
+MC Question:
+Why would someone set up a lambda function?
+Options:
+A: To Figure out a formula
+B: To set up a function for future use 
+C: To give a name to a certain function or expression
+D. To display a cool lamb on your computer screeen
+Answer: B
+=======================
+Question 36:
+MC Question:
+Which of these is functioning Racket code?
+Options:
+A) (2 + 2)
+B) (define (lambda (plsdotheproblem)
+(= plsdotheproblem 2)))
+C) (sqrt 2)
+D) (define fuction 2
+Answer C
+=======================
+Question 37:
+MC Question:
+Which of the following is an example analog data?
+Options:
+A: How you are feeling today
+B: Did you go to school today
+C: Was the test easy or hard
+D: If you are sad or happy
+
+Answer: A 
+Make a function to find the volume of a cylinder from the diameter and height
+=======================
+Question 38:
+MC Question:What is a parameter?
+Options:
+A) An input program
+B) An output of a program of code
+C) A variable that is used in a function to refer to an input
+D) A literal value used when testing the function
+Answer:C
+=======================
+Question 39:
+MC Question:
+Which function is equivalent to:
+(expt 4 5)
+Options:
+A) (+ 24 (* 10 (sqrt 100)))
+B) (+ (/ 72 3) (expt 10 3))
+C) (/ 4 4 4 4 4)
+D) (/ (/ 4 4) 4)
+Answer: B
+=======================
+Question 40:
+MC Question: Which of the following are illegitimate programming languages/softwares?
+Options:
+A) Python
+B) Java
+C) Racket
+D)Anaconda
+
+Answer: D
+=======================
+Question 41:
+MC Question:
+Which choice is an example of analog feedback?
+Options:
+A) The speedometer of a car
+B) The time on a smartwatch 
+C) The weight on a digital scale
+D) The data store in a computer memory
+Answer: A
+=======================
+Question 42:
+MC Question:
+What is the powerhouse of the cell
+Options:
+a) mitochondria
+b) ribosome
+c) nucleus
+d) a single organelle does not represent the entirety of the cell's energy production
+
+Answer: d
+=======================
+Question 43:
+MC Question: Why would someone set up a lambda function?
+Options:
+A: To figure out a formula
+B: To set up a function for future use
+C: To give a name to a certain function or expression
+D: To display a cool lamb on your computer screen
+Answer: B
+=======================
+Question 44:
+Mc question: What is the general pattern that every statement in racket follows? What is the general form of every statment in racket?
+A. (function argument_0 argument_1 ...), prefix
+B. (argument_0... function argument_1...), prefix
+C. (function, argument_0 argument_1...), infix
+D. (argument_0... function argument_1...), infix
+
+answer: A
+=======================
+Question 45:
+MC Question: What do we call the inputs when making a function?
+Options:
+a. Arguments
+b. Parameters
+c. Boolean values
+d. Procedures
+Answer
+b. Parameters
+=======================
+Question 46:
+MC Question: Which of the following functions returns #t when you call it?
+Options:
+A) (and (< 2 3) (= 5 7))
+B) (or (> 8 9) (and (= 4 5) (> 7 5)))
+C) (or (< 9 10) (= 8 5))
+D) 
+Answer
+=======================
+Question 47:
+lang racket
+;MC QUESTION: What is "lambda" used for?
+;OPTIONS:
+;1. To create a function
+;2. To compare functions
+;3. To determine whether a function is true or false
+;4. None of the above
+;ANSWER: 1
+
+;PROGRAMMING QUESTION: Create a function called "velocity"
+;that finds the velocity of a moving object given the distance and time of the object.
+;Use this formula: Velocity = Distance/Time
+;POSSIBLE SOLUTION:
+(define velocity
+  (lambda (distance time)
+    (/ distance time))
+=======================
+Question 48:
+MC Question:
+What is literal data?
+Options:
+A) data that can potentially change while a program is running
+B) a series of functions
+C) data that is exactly what it appears to be
+D) a function with multiple values
+
+Answer: C
+=======================
+Question 49:
+Mc question: What is the general pattern that every statement in racket follows? What notation do the statements in Racket follow?
+Choices:
+A. (function argument_0 argument_1 ...), prefix
+B. (argument_0... function argument_1 ...), prefix
+C. (function argument_0 argument_1 ...), infix
+D. (argument_0... function argument_1 ...), infix
+
+answer: A
+=======================
+Question 50:
+MC Question:
+Which of the following is an example analog data?
+Options:
+A: How you are feeling today
+B: Did you go to school today
+C: Was the test easy or hard
+D: If you are sad or happy
+
+Answer: A
+
+Programming Question:
+Make a function to find the volume of a cylinder from the diameter and height
+
+
+Answer: See below for an acceptable solution
+
+(define volCyl (lambda (d h)
+                 (* h
+                  (expt
+                  (* pi (/ d 2)) 2))))
+=======================
+Question 51:
+MC Question:
+Charateristics of analog signals include:
+
+Options:
+a) Continous change
+b) Typically less accurate than digital signals
+c) Both a and b
+d) Neither a or b
+
+Answer: C
+=======================
+Question 52:
+MC Question:
+Options:
+Which of the following does not use proper Racket syntax?
+A) (+ 5 -6.7)
+B) (/ 3 4 5)
+C) (and (not (= 3 4)(> 2 4))
+D) ( = 3 (+ 2 4))
+Answer C
+=======================
+Question 53:
+MC Question:
+Which of the following is the correct way to format a function in DrRacket?
+Options:
+A) (2 * 3)
+B) (lambda (* 1/2 b h)
+C) (/ 2 (* 2 (+ 4 5)))
+D) (define TriArea (lambda) b h (* 1/2 b h)
+
+Answer: C
+=======================
+Question 54:
+MC Question:
+What is the difference between (quotient a b) and (remainder a b)?
+Options:
+A) They are the same function.
+B) quotient only gives interger answers while remainder only gives the number left after the decimal.
+C) remainder gives the value that can not be completely divided while quotient only gives interger answer.
+D) Remainder gives the mathmatical answer, while quotient drops the remainder part.
+
+Answer: C
+=======================
+Question 55:
+MC Question: What is a parameter?
+Options:
+A) An input program
+B) An output of a program of code
+C) A generic variable in the input/coding of a program
+D) A literal value used in the input
+Answer: C
+=======================
+Question 56:
+MC Question:
+What is the difference between (quotient a b) and (remainder a b)?
+Options:
+A) They are the same function.
+B) Quotient only gives the integer answer, while remainder only gives the number after the decimal.
+C) Remainder gives the value that cannot be completely divided, while quotient only gives integer answers.
+D) Remainder gives the mathmatical answer, while quotient drops the remainder part of the answer.
+
+Answer: C
+-----------------------------
+Programming question: =
+Find the area of an equilateral triangle given the side length of your choice.
+Hint: Area formula for equilateral triangle is:
+(a^2*square root 3/4)
+
+Possible Solution: (side length 2)
