@@ -38,7 +38,7 @@
 ;You should modify these variables to test different
 ;versions of the game.
 (define trials 1000) ;Number of game simulations to run
-(define diceSides 12) ;Sides for die used in rollList
+(define diceSides 50) ;Sides for die used in rollList
 (define evenFail 2) ;When even rolls fail, used in losingRoll
 (define oddFail 1) ;When odd rolls fail, used in losingRoll
 (define evenRolls 6) ;Number of rolls for a single game
