@@ -1,0 +1,628 @@
+
+=======================
+Question 0:
+MC Question:
+Which function does not always return a list?
+Options:
+A (buildlist)
+B (list)
+C (foldl)
+D (cons)
+Answer
+C
+=======================
+Question 1:
+
+=======================
+Question 2:
+MC Question: What is a recursive function?
+
+Options:
+A) It creates a function
+B) It creates a random list
+C) It is a self-referring function
+D) It is an arithmetic function
+Answer
+C) It is a self-referring function
+=======================
+Question 3:
+MC Question: What is a recursive function?
+Options:
+a) It creates a function.
+b) It creates a random list.
+c) It is a self-referring function.
+d) It is an arithmetic function.
+
+Answer
+c) It is a self-referring function.
+=======================
+Question 4:
+MC Question:
+Select the correct description of the function "map"
+Options:
+A) Goes through each element of a list, performing a provided function.
+B) Takes a list, perform function in list, and give value back.
+C) Filters certain values from a list.
+D) Is logical operator
+
+Answer: A
+=======================
+Question 5:
+MC Question:
+
+What is the "if" statement that stops recursion from going to infinity and breaking your storage?
+
+Options:
+A) Base Case
+B) Cancel Statement
+C) Stop Case
+D) If Statement
+
+Answer
+=======================
+Question 6:
+MC Question:
+Which of the following is a valid racket code?
+Options:
+a) (build-list 10)
+b) (random 0)
+c) (build-list -5)
+d) (build-list 10 (lambda (x) (random 10)))
+Answer: D
+=======================
+Question 7:
+MC Question:
+filter needs?
+Options:
+A: a two argument function
+B: a one argument function
+C: a one argument function that returns a boolean
+D: a two argument function that returns a boolean
+Answer:
+C
+=======================
+Question 8:
+MC Question:
+In a linked list, what does a node contain?
+
+Options:
+A) A value
+B) A value and a link to the next node
+C) A function
+D) A function and a link to the next node
+
+Answer: B
+=======================
+Question 9:
+MC Question:
+What happens when your recursion does not have a base case check?
+Options:
+A) Nothing!
+B) Your recursion exits normally when it reaches the base case.
+C) Your recursion loops infinitely until your stack runs out of RAM.
+D) Racket knows when you _want_ to end the recursion and does so at that time.
+Answer: C
+=======================
+Question 10:
+MC Question:
+In a linked list, what does a node contain?
+Options:
+A) A value
+B) A value and a link to the next node
+C) A function
+D) A function and a link to the next node
+
+Answer:
+=======================
+Question 11:
+MCQ: When using recursion on a list, what is the smallest version of that list you can work with?
+
+Options:
+a) #t
+b) A list with one element in it
+c) No list
+d) A list with zero elements
+
+Answer: d)
+=======================
+Question 12:
+MC Question:
+What is the difference between the base case and a recursive case?
+
+Options:
+A) a base case is often an empty list
+B) a base case is the absolute easiest version of a problem
+C) a recursive case usually involves the list-specific functions first, rest, and list
+D) all of the above
+
+Answer: D
+=======================
+Question 13:
+MC Question:
+What is an example of how you would use "build-list"?
+Options:
+1) If you want to create a list with multiple arguments
+2) If you want to create a list applying an operation to an argument
+3) If you want to create a list with a certain amount of values
+4) If you want to duplicate the amount of arguments in a list
+Answer
+2) If you want to create a list applying an operation to an argument
+=======================
+Question 14:
+MC Question:
+How do you add the value (1) in front of the list '(2 3 4 5)?
+Options:
+A) (list 1 '(2 3 4 5))
+B) (list (cons 1 '(2 3 4 5)))
+C) (cons 1 '(2 3 4 5))
+D) ((cons (2 3 4 5)') 1)
+
+Answer: C
+=======================
+Question 15:
+MC Question:
+Which of these does NOT represent a list?
+
+Options:
+1. '(1 2 3 4 5)
+2. (list)
+3. (list 1 2 3)
+4. (sqrt)
+
+Answer: 4
+=======================
+Question 16:
+MC Question: How do you check if a list is empty?
+g is a list.
+Options:
+1. (if (= g 0)...)
+2. (null? g)
+3. (if null? g)
+4. (null g)
+Answer: 2. (null? g)
+=======================
+Question 17:
+MC Question:
+Filter needs what parameters?
+Options:
+A: a two argument function
+B: a one argument function
+C: a one argument function that returns a boolean
+D: a two argument function that returns a boolean
+
+Answer: C
+=======================
+Question 18:
+MC Question:How do you check if a list is empty?
+G is a list
+Options:
+1. (if (= g 0)...)
+2. (null? g)
+3. (if null? g)
+4. (null g)
+Answer: 2
+=======================
+Question 19:
+MC Question: Which of the following is most likely a base case in recursion?
+
+Options:
+A. (+ n 1)
+B. (null)
+C. (function (+ n (first g)) (rest g)))
+D. (define x)
+
+Answer: B.
+=======================
+Question 20:
+MC Question:
+What happens when your recursion does not have a base case check?
+
+Options:
+A) Nothing!
+B) Your recursion exits normally when it reaches the base case.
+C) Your recursion loops infinetly until your stack runs out of RAM.
+D) Racket knows when you _want_ to end the recursion and does so at that time.
+
+Answer: C
+=======================
+Question 21:
+MC Question: How many inputs does foldl take?
+
+Options:
+A. 1
+B. 2
+C. 3
+D. 4
+Answer:
+C
+=======================
+Question 22:
+MC Question:
+Which of the following is not a list?
+Options:
+1) '(1 2 3 4)
+2) (list)
+3) (list 1 2 3)
+4) (sqrt)
+
+Answer: 4
+=======================
+Question 23:
+MC Question:
+Which function does return a list?
+Options:
+A (buildlist)
+B (list)
+C (foldl)
+D (cons)
+Answer
+C
+=======================
+Question 24:
+MC Question:Which is most likely the base case in a recursion function?
+
+Options:
+a) (+ n 1)
+b) (null? g)
+c) (function (+ n (first g) (rest g)))
+d) (define x)
+Answer
+b) (null? g)
+=======================
+Question 25:
+MC Question:
+What is the if statement that stops the recursion function from going to infinity and beyond called?
+A) Base Case
+B) Cancel Statement
+C) Stop Case
+D) If Statement
+
+Answer
+=======================
+Question 26:
+MC Question:
+
+How many inputs does foldl take?
+
+Options:
+A. 1
+B. 2
+C. 3
+D. 4
+
+Answer
+C. 3
+=======================
+Question 27:
+MC Question:
+What is an empty list referred to as?
+
+Options:
+A) nil
+B) none
+C) null
+D) not
+
+Answer: C
+=======================
+Question 28:
+MC Question:
+How do you add the value 1 in front of the list '(2 3 4 5)?
+
+Options:
+A) (list 1 '(2 3 4 5))
+B) (list (cons 1 '(2 3 4 5)))
+C) (cons 1 '(2 3 4 5))
+D) (cons (2 3 4 5)') 1)
+
+Answer: C
+=======================
+Question 29:
+MC Question:
+Which option is valid racket code?
+
+Options:
+A) (build-list 10)
+B) (random 0)
+C) (build-list -5)
+D) (build-list 10 (lambda (x) (random 10)))
+
+Answer D
+=======================
+Question 30:
+MC Question:
+Which of these represents a function that gives a random value between 1 and 12 including both 1 and 12?
+
+Options:
+A) (random 1 12)
+B) (random (< 1 12))
+C) (random 1 13)
+D) (random (< 1 13))
+
+Answer: C
+=======================
+Question 31:
+MC Question:
+What is the correct way to create a list of 5 random numbers from 10 to 20?
+Options:
+A) (build-list 5 (lambda (x) (random 10 20)))
+B) (build-list 5 (random 10 20))
+C) (build-list 5 (lambda (x) (random 10 21)))
+D) (build-list 5 (random 10 21))
+
+Answer: C
+=======================
+Question 32:
+MC Question: What is a recursive function?
+
+Options:
+1) a function that uses the conditionals and or, or not, and returns a boolean value
+2) a node with data and a link to the empty list
+3) a function that involves self reference, solving problems by solving a smaller version of the same problem
+4) a function that uses the comparative functions greater than, less than, or equal to, returning a boolean value
+Answer
+3) a function that involves self reference, solving problems by solving a smaller version of the same problem
+=======================
+Question 33:
+MC Question:
+What does the last element in a linked list link to?
+Options:
+A) Nothing
+B) 0
+C) Null
+D) The first element of the list
+
+Answer: C
+=======================
+Question 34:
+MC Question:
+When (foldl + 0 '(1 2 3 4)) is run what calculation(s) does it make?
+Options:
+A) (+ 1 2 3 4)
+B) (+ 1 0), (+ 2 1), (+ 3 3), (+ 4 6)
+C) (+ 0 1 2 3 4)
+D) (+ 0 1), (+ 2 1), (+ 3 2), (+ 4 3)
+Answer: B
+=======================
+Question 35:
+MC Question:
+What is the correct way to create a list of 5 random numbers from 10 to 20?
+Options:
+a) (build-list 5 (lambda (x) (random 10 20)))
+b) (build-list (random 10 20))
+c) (build-list 5 (lambda (x) (random 10 21)))
+d) (build-list (random 10 21))
+
+Answer: C
+=======================
+Question 36:
+MC Question:
+What does recursive function do?
+A) Use its own definiton to perform its function
+B) Repeatedly performs itself
+C) To curse again, again
+D) It never ends
+
+=======================
+Question 37:
+MC Question:
+What is a linked list?
+
+Options:
+(A)A list that is attached to a specific value.
+(B)A data structure made of data nodes.
+(C)A list where all the values follow a consistent pattern.
+(D)A data structure made of at least three lists.
+
+
+Answer
+(B)
+=======================
+Question 38:
+MC Question:
+What 0-based indexing mean?
+Options:
+A) Makes a list with 0 values
+B) First list element has a value of 0
+C) The first list element is at position 0
+D) An index that has all possible donut locations in your neighborhood
+
+Answer: C
+=======================
+Question 39:
+MC Question: which of these functions would return the first 5 cube roots
+
+Options:
+a)(build-list 5 (lambda (x) (sqrt x)))
+b)(build-list 5 (foldl 12))
+c)(build-list 5 (lambda (x) (expt x 1/3)))
+d)(foldl+1/3)
+Answer
+C
+=======================
+Question 40:
+MC Question:
+What function can be a parameter of build-list?
+Options:
+A) remainder
+B) +
+C) sqrt
+D) or
+
+Answer: C
+=======================
+Question 41:
+MC Question: Why are recursive functions so useful and important in CS?
+
+A.It allows us to build a list
+B.It allows us to use a function multiple times in the same operation
+C.It allows us to crash the system to avoid encountering trouble in our work
+D.It doesn't help us at all nor is it important to CS.
+
+Correct Answer: B
+=======================
+Question 42:
+MC Question:
+What is necessary to make a function recursive?
+Options:
+A) a function that has the word recursive in it
+B) a function that references another function
+C) a function that calls a parameter twice
+D) a function that calls itself
+
+Answer: D
+=======================
+Question 43:
+MC Question: If you want to take a list and perform a function on the elements of that list and get a value back, which built-in function would be the best to use?
+
+Options:
+A. filter?
+B. foldl
+C. build-list
+D. cons
+
+Answer
+B. foldl
+=======================
+Question 44:
+MC Question:
+What does a recursive function do?
+A. Use its own definiton to perform its function
+B. Repeatedly performs itself
+C. To curse again, again
+D. It never ends
+=======================
+Question 45:
+MC Question:
+What does the last element of a linked list link to?
+Options:
+A) Nothing
+B) 0
+C) null
+D) the first element of the list
+Answer:
+C
+
+=======================
+Question 47:
+MC Question:
+What does 0-based indexing mean?
+Options:
+A) Makes a list with 0 values
+B) First list element has a value of 0
+C) The first list element is at position 0
+D) An index that has all possible donut shop locations in your neighborhood
+Answer
+=======================
+Question 48:
+MC Question:
+What makes a recursive function recursive?
+Options:
+a)a function that has the word recursive in it
+b)a function that another function
+c)a functoin that calls a parameter twice
+d)a functoin that calls for itself
+
+Answer d
+=======================
+Question 49:
+MC Question: What are the parameters when using foldl?
+
+Options:
+A). (list, function number)
+B). (list, number, function)
+C). (function, list, number)
+D). (function, number, list)
+
+Answer: D
+=======================
+Question 50:
+MC Question: If you want to take a list and perform a function on the elements of that list and get a value back, which built-in function would be the best to use?
+
+Options:
+A. filter?
+B. foldl
+C. build-list
+D. cons
+
+Answer
+B. foldl
+=======================
+Question 51:
+MC Question: What is a linked list?
+
+Options:
+A. A list that is attached to a specific value.
+B. A data structure made of data nodes.
+C. A list where all the values follow a specific pattern.
+D. A data structure made up of at least 3 lists.
+Answer
+B.
+=======================
+Question 52:
+Multiple Choice:
+What is a Recursive function?
+Options:
+A a function that uses the conditionals and or, or not, and returns a boolean value
+B a node with data and a link to the empty list
+C a function that involves self reference, solving problems by solving a smaller version of the same problem
+D a function that uses the comparative function greater than, less than, or equal to, returning a boolean value
+Answer: C
+=======================
+Question 53:
+MC Question: Which of these represents a function that gives a random value between 1 and 12, including both 1 and 12?
+
+Options:
+A) (random 1 12)
+B) (random (< 1 12))
+C) (random 1 13)
+D) (random (< 1 13))
+
+Answer: C
+=======================
+Question 54:
+MC Question: What are the parameters for when using foldl?
+
+Options:
+A) (list, fuction, number)
+B) (list, number, function)
+C) (function, list, number)
+D) (function, number, list)
+
+Answer
+D
+=======================
+Question 55:
+MC Question:
+When (foldl + 0 '(1 2 3 4)) is run, what calculation(s) does it make?
+
+Options:
+A) (+ 1 2 3 4)
+B) (+ 1 0), (+ 2 1), (+ 3 3), (+ 4 6)
+C) (+ 0 1 2 3 4)
+D) (+ 0 1), (+ 2 1), (+ 3 2), (+ 4 3)
+
+Answer:
+B
+=======================
+Question 58:
+MC Question:Why are recursive funtions useful in CS?
+
+Options:
+A. It allows us to build a list
+B. It allows us to use a function multiple times in one operation
+C. It allows us to crash the system to avoid trouble in out functions
+D. It doesn't help us and isn't useful in CS
+
+Answer: B
+=======================
+Question 59:
+MC Question:
+Which of the following sentences is an example of a recursive definition?
+Options:
+A) A teacher teaches today and tomorrow.
+B) A teacher is a profession that educate/give knowledge to future generations to better prepare them for the future.
+C) A loop
+D) A teacher is a person that teaches.
+
+Answer: D

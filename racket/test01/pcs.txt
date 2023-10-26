@@ -1,0 +1,744 @@
+
+=======================
+Question 0:
+Programming question:
+Write a function that returns a list of every year from the founding to stuyvesant 1904 till (inclusive)
+Description
+
+Returns a list of years
+=======================
+Question 1:
+Programming question: Write a function that returns the product of all the odd values in a list.
+
+Description
+Use functions such as null?,cons, filter, list, first, rest. 
+
+Possible solution:
+(define g (list 1 2 3 4 5 6 7 8 9 10))
+(define oddProduct
+  (lambda (n g)
+    (if (null? g)
+        (0)
+        (* (first (filter odd? g)) (rest (filter odd? g))))))
+(oddProduct 10 g
+=======================
+Question 2:
+Programming question: Write a function that returns the average of a list g
+
+Description
+
+(averageList g)
+- Assume g is a list of number 
+
+Possible solution:
+(define averageList
+  (lambda (g)
+    (if (null? g)
+        0
+        (/ (sumList g) (length g)))))
+
+(define g (list 1 2 3 4))
+
+(define sumList
+  (lambda (g)
+    (foldl + 0 g)))
+=======================
+Question 3:
+Programming question: Write a function that returns the average of list g.
+
+Description
+(averageList g)
+- Assume g is a list of numbers only.
+
+Possible solution:
+(define (averageList g)
+    (if (null? g)
+        '()
+        (/ (sumList g) (length g))))
+
+(define sumList
+  (lambda (g)
+    (foldl + 0 g)))
+=======================
+Question 4:
+Programming question: Create a function that finds the difference of the numbers in a given list?
+
+Description
+Assume g is the list of numbers only. 
+
+Possible solution:
+(define diffList
+  (lambda (g)
+    (if (null? g)
+        0
+        (- (first g) (diffList (rest g))))))
+=======================
+Question 5:
+Programming question:
+
+The Fibonacci Sequence is a sequence of numbers wehre each number is the sum of the previous
+two numbers starting with 0 and 1. It would begin with: 0, 1, 1, 2, 3, 5, 8, 13 ....
+Below is the base of fib, which uses the function "helper". Create function helper that makes "fib" work.
+It is guaranteed that n >= 2.
+
+Possible solution:
+=======================
+Question 6:
+Programming question:
+Write a function (averageList) that finds the average of the values in a given list.
+
+Possible solution:
+(define averageList
+  (lambda (list)
+(/ (foldl + 0 list) (length list))))
+=======================
+Question 7:
+Programming question:
+
+Write a recursive function that returns the sum of the recirprocals a list.
+
+Possible solution:
+=======================
+Question 8:
+Programming question:
+Write a function that works the same way as the function (filter)
+Description
+(myFilter f g)
+f represents the function
+g represents the list
+Possible solution:
+
+(define myFilter
+  (lambda (f g)
+    (if (null? g)
+        (list)
+        (if (f (first g))
+           (cons (first g) (myFilter f(rest g)))
+           (myFilter f (rest g))
+           ))))
+;test cases
+(myFilter even? (list 1 2 3 4 5 6 7 8 9 0))
+(myFilter odd? (list 1 2 3 4 5 6 7 8 9 0))
+(myFilter
+ (lambda (x)
+   (> x 4)) (list 1 2 3 4 5 6 7 8 9 0))
+=======================
+Question 9:
+Programming question:
+Write a function that finds the greatest number in a provided list of numbers. You can assume
+the list is non-empty. The only list-specific functions you can use are first, rest, and null?
+Your function should look like (listMax g currentMax), and to use the function, currentMax
+should be less than any value in the list. -inf.0 is a valid value to use.
+
+Possible solution:
+
+(define listMax
+  (lambda (g currentMax)
+    (if (null? g)
+        currentMax
+        (if (> (first g) currentMax)
+            (listMax (rest g) (first g))
+            (listMax (rest g) currentMax)))))
+=======================
+Question 10:
+Programming question:
+Write a function that works the same way as (filter)
+Description:
+(myfilter f g)
+f is the function and g is the list
+
+Possible solution:
+(define myfilter
+    (lambda (f g)
+        (if (null? g)
+            g
+            (if (f (first g))
+                (cons (first g) (myfilter f (rest g)))
+                (myfilter f (rest g))))))
+(myfilter even? (list 1 2 3 4 5 6 7 8 9 0))
+=======================
+Question 11:
+Programming Question: Write a recursive function that takes an integer and makes a list counting down by 5 each time.
+
+Possible Solution:
+(define countDownFive
+  (lambda (n)
+    (if (= n 0)
+        (cons 0 (list))
+        (cons n (countDownFive (- n 5))))))
+=======================
+Question 12:
+Programming question:
+Write a function, using recursion, that returns a list containing the values of g to the second power.
+
+Description
+(getSquare g)
+Assume g is a list of just numbers
+
+Possible solution:
+(define getSquare
+  (lambda (g)
+         (if (null? g)
+             null
+             (cons (expt (first g) 2) (getSquare (rest g))))))
+(getSquare '(5 25 13 12 4 16 7))
+=======================
+Question 13:
+Programming question:
+Write a function that filters odd numbers of a list.
+
+Possible solution:
+=======================
+Question 14:
+Programming question:
+Write a function (filterevensquares n) that returns a list of all the even squares from n to 0
+
+Possible solution:
+=======================
+Question 15:
+Programming question:
+Write a function `myExpt` that takes non-negative, non-zero integers that raises `a` to the power of `b`.
+=======================
+Question 16:
+Programming question:
+(countDownTwo n)
+Takes a number and returns a list counting down by twos to zero. 
+
+Description: 
+Takes a number and returns a list counting down by twos to zero.
+
+Possible Solution:
+(define countDownTwo
+  (lambda (n)
+    (if (<= n 0)
+        (if (even? n)
+            (list 0)
+            (list))
+        (cons n (countDownTwo  (- n 2))))))
+(countDownTwo 9)
+(countDownTwo 8)
+=======================
+Question 17:
+Programming question:
+
+Write a recursive function that returns the sum of the recirprocals a list.
+
+Possible solution:
+=======================
+Question 18:
+Programming question: (coutnDownTwo n)
+Takes a number and returns a list counting down by twos to zero.
+
+Possible solution:
+(define countDownTwo
+  (lambda (n)
+    (if (<= n 0)
+     (if (even? n)
+        (list 0)
+        (list))
+        (cons n (countDownTwo (- n 2))))))
+    
+(countDownTwo 9)
+(countDownTwo 8)
+=======================
+Question 19:
+Programming question: Program a function that takes in a list and a number and returns a list countaining
+the values of the list times the number
+
+Description
+
+Possible solution:
+
+(define doublify (lambda (g n)
+                   (if (null? g)
+                       (list)
+                       (cons (* (first g) n) (doublify (rest g))))))
+=======================
+Question 20:
+Programming question: Write a function that finds the greatest number in a provided list of mumber.
+You can assume the list is non-empty. The only list specific function you can use are first,
+rest, and null?. Your function should look like (listMax g currentMax), and to use the function
+currentMax should be less than any value in the list. -inf.0 is a valid value to use. 
+
+
+Possible solution:
+(define listMax
+ (lambda (g currentMax)
+    currentMax
+    (if (> (first g) currentMax)
+        (listMax (rest g) (first g))
+        (listMax (rest g) currentMax)))))
+=======================
+Question 21:
+Programming question:
+
+Description
+Write two functions that count the amount of odd values in a list, one using recursion and one using foldl.
+
+Possible solution:
+
+(define countOddsRecursion
+  (lambda (listl)
+    (if (null? listl)
+        0
+        (if (odd? (first listl))
+            (+ 1 (countOddsRecursion (rest listl)))
+            (countOddsRecursion (rest listl))))))
+
+(define countOddsFoldl
+  (lambda (listl)
+    (foldl (lambda (x y) (+ 1 y)) 0 (filter odd? listl))))
+=======================
+Question 22:
+Programming question:
+Write a function `myExpt` that raises `a` to the power of `b` when `a` and `b` are both non-negative, nonzero integers.
+
+Possible solution:
+=======================
+Question 23:
+Programming question:
+Write a function that returns a list of every year from the founding to stuyvesant 1904 till (inclusive)
+Description
+
+Returns a list of years
+=======================
+Question 24:
+Programming question:Create a recursion function that multiplies the list by n.
+
+Description
+
+Possible solution:
+(define multiplyn
+  (lambda (g)
+    (if (null? g)
+        (list)
+        (cons (* (first g) n) (multiplyn (rest g))))))
+=======================
+Question 25:
+Programming question:
+The Fibonacci Sequence is a sequence of numbers where each number is the sum of the previous two numbers starting with 0 and 1.
+The Fibonacci Sequence would being with: 0, 1, 1, 2, 3, 5, 8, 13, ....
+Create a recursive function "fib" which will return the first n numbers of the Fibonacci Sequence.
+You are allowed to create other functions to help with "fib".
+It is guaranteed that n >= 2.
+
+Possible solution:
+=======================
+Question 26:
+Programming question:
+
+Description
+
+Write two functions that counts the amount odd values in a list, one with recursion and the other with foldl.
+
+Possible solution:
+
+(define countOddsFoldl
+    (lambda (list1)
+      (foldl (lambda (x y) (+ 1 y)) 0 (filter odd? list1))))
+
+(define countOddsRecursion
+  (lambda (list1)
+    (if (null? list1)
+        0
+        (if (odd? (first list1))
+            (+ 1 (countOddsRecursion (rest list1)))
+            (countOddsRecursion (rest list1))))))
+=======================
+Question 27:
+Programming question:
+Write a function that gives the value multipled by the positon of the list it is in, following 0 index.
+
+Description:
+
+
+Possible solution:
+(define posMul
+  (lambda (n g)
+    (if (null? g)
+        (list)
+        (cons (* (first g) n) (posMul (+ n 1) (rest g))))))
+(posMul 0 (list 1 2 3 4 5))
+=======================
+Question 28:
+Programming question:
+Create a function (filterEvenSquares n) that returns a list of all the even squares when every number from n to 0 is squared
+
+Description:
+- The function is recursive
+- Test Case: (filterEvenSquares 5) returns '(16 4)
+
+Possible solution:
+=======================
+Question 29:
+Programming question:
+Write a function that finds the average of a list of numbers.
+
+Possible solution:
+
+(define average
+  (lambda (list)
+    (/ (foldl + 0 list) (length list))))
+=======================
+Question 30:
+Programming question:
+
+Create a list, g, with 5 elements containing random numbers between 0 and 10 inclusive of both 1 and 10.
+Write a function, (twoLess g), which returns the list containing the values of g, minus 2.
+
+
+Possible solution:
+
+(define g (build-list 5 (lambda (n) (random 10))))
+g
+
+(define twoLess
+  (lambda (a)
+    (if (null? a)
+        (list)
+        (cons (- (first a) 2) (twoLess (rest a ))))))
+(twoLess g)
+=======================
+Question 31:
+Programming question:
+Write a recursive function that returns a list containing the amount of even numbers in a list (g) using only null?, even?, first, and rest. 
+
+Possible solution:
+(define evens
+  (lambda (g)
+    (if (null? g)
+        0
+        (if (even? (first g))
+            (+ 1 (evens (rest g)))
+            (evens (rest g))))))
+=======================
+Question 32:
+Programming question: Filter the even numbers in a list.
+
+Description: Create function "evenValues" that uses the variable g.
+
+Possible solution:
+(define evenValues (lambda (g) (filter even? g)))
+(evenValues (list 1 2 3 4))
+=======================
+Question 33:
+Programming question:
+Create a function that, when given a list of numbers, returns the average of all of them.
+average = sum of all elements / number of elements
+
+Possible solution:
+=======================
+Question 34:
+Programming Question:
+Write a function (sqrtList g) to find the square root of all numbers within a list.
+
+Possible Solution:
+(define sqrtList
+  (lambda (g)
+    (if (null? g)
+        (list)
+        (cons (sqrt (first g)) (sqrtList (rest g))))))
+=======================
+Question 35:
+Programming question:
+Write a recursive function that returns a list containing the amount of even numbers in a list (g), using only first, rest, even?, and null?.
+
+
+Possible solution:
+
+(define even
+  (lambda (g)
+    (if (null? g)
+        0
+        (if (even? (first g))
+            (+ 1 (even (rest g)))
+            (even (rest g))))))
+=======================
+Question 36:
+
+=======================
+Question 37:
+Programming question:
+Create a list of 5 random real numbers between 1-10 inclusive that is called s.
+Create a function called prodList that returns the product of the values of s.
+
+Possible solution:
+(define s
+  (build-list 5 (lambda (n) (random 1 11))))
+
+(define prodList
+  (lambda (nums)
+    (if (null? nums)
+        1
+        (* (first nums) (prodList (rest nums))))))
+=======================
+Question 38:
+Programming question:
+Danny Is playing a game. He must roll a 20-sided dice 20 times.
+If he doesn't get a 20 at least onet ime in those 20 rolls, he'll lose. If he does, he wins.
+Find the function that simulates ths game.
+Description
+
+Possible solution:
+=======================
+Question 39:
+Programming question: build a list with 10 elements, that is then filtered to just elements divisible by 3.
+
+Description
+
+Possible solution:
+(define original-list (list 1 2 3 4 5 6 7 8 9 10))
+
+(define divisible-by-3? (lambda (n)
+  (= (remainder n 3) 0)))
+
+(define filtered-list (filter divisible-by-3? original-list))
+=======================
+Question 40:
+Programming question:
+Make a recursive function with 3 parameter: smaller integer, larger integer, and a list.
+Have the function return a list only containing numbers greater then the
+smaller integer and less than the larger integer.
+
+Possible solution:
+=======================
+Question 41:
+Programming question: Create a list that takes a list and returns values of that list divided
+by 2. Name the function half.
+
+Possible solution:
+=======================
+Question 42:
+Programming question:
+Write a recursive function called multiplyListSum that multiplies the sum of a given list by n.
+
+Possible solution:
+=======================
+Question 43:
+Programming question:
+avgList: Given a list g, return a list of the average of the list.Use the built-in (length) function.
+How to calculate an average of a set of values: (sum of values)/(number of values in set)
+
+Possible solution:
+(define avgList
+    (lambda (g)
+      (/ (foldl + 0 g) (length g))))
+=======================
+Question 44:
+Programming Question:
+Write a function called bleh that multiplies an element
+by 3 if it is even or multiply it by 2 if it is odd.
+
+(define (bleh g)
+(if (null? g)
+null
+(cons (if (even? (first g))
+(* (first g) 3)
+(* (first g) 2)) (bleh (rest g)))))
+
+(define f (list 1 2 3 4))
+(bleh f)
+=======================
+Question 45:
+Programming question:
+Given a list of numbers, find the average value of the numbers in the list. You can use the length function.
+(If you don't use length there's also a way to do it: `(foldl (lambda (value previous) (+ 1 previous)) 0 g)`
+
+Formula: Avg = (sum of values)/(number of values)
+
+Possible solution:
+(define findAverage
+  (lambda (g)
+    (/ (foldl + 0 g) (length g))))
+
+(findAverage (list 5 10 9))
+=======================
+Question 46:
+Programming question:
+Write a function that takes a positive integer n.
+If n is even, divide it by two, and list it.
+If n is odd, multiply it by three and add one, and list it.
+This function repeats until n=1.
+
+Possible solution:
+=======================
+Question 47:
+Programming question:
+Danny is playing a game. He must roll a 20-sided dice 20 times.
+If he doesn't get a 20 at least one time in those 20 rolls, he'll lose. If he does, he wins.
+Find the function that simulates this game. 
+Base your answer on this function:
+
+(define D&D:Diabolical_Difficulty
+  (build-list 20 (lambda (x) (random 1 21))))
+
+Possible solution:
+(define nat20
+  (lambda (g)
+    (if (null? g)
+        (print "you lose! :(")
+        (if (= 20 (first g))
+            (print "you win! :D")
+            (nat20 (rest g))))))
+=======================
+Question 48:
+Programming question: Write a recursive function multiplylistsum that multiplies the sum of a list by n
+
+Description
+
+Possible solution:
+=======================
+Question 49:
+Programming question:
+Create a function (MMM g) that returns the mean of a list g.
+
+Description
+
+Possible solution:
+(define mean
+  (lambda (g)
+   (list (/ (foldl + 0 g)
+       (foldl (lambda (value previous) (+ 1 previous)) 0 g)))))
+=======================
+Question 50:
+Programming question:
+avgList: Given a list g, return a list of the average of the list. 
+How to calculate an average of a set of values: (sum of values)/(number of values in set)
+You can use the length function!!
+
+Possible solution:
+(define avgList
+    (lambda (g)
+      (/ (foldl + 0 g) (length g))))
+=======================
+Question 51:
+Programming question: TO CURSE AGAIN
+Create a list of 5 random real numbers between 1 and 10 INCLUSIVE that is called s.
+Create a function prodList that returns the product of the values!
+
+
+Possible solution:
+(define s
+ (build-list 5 (lambda n (random 1 11))))
+ (define prodList
+   (lambda (nums)
+     (if (null? nums)
+         1
+         (* (first nums) (prodList (rest nums))))))
+=======================
+Question 52:
+Programming Question:
+Filter the even values of a given list. 
+Description:
+Create a function called "evenValues" that uses the variable "g".
+Possible Solution:
+=======================
+Question 53:
+Programming question:
+
+Build a list g with 5 elements containing random numbers between 0 and 10, inclusive of both valueS. Then write a function (twoLess g) to return the list containing all the values of g when 2 is subtracted.
+
+
+Description
+
+Possible solution:
+(define g (build-list 5 (lambda (a) (random 0 11))))
+
+(define twoLess 
+  (lambda (g)
+    (if (null? g)
+        '()
+        (cons (- (first g) 2) (twoLess (rest g))))))
+=======================
+Question 54:
+Programming question:
+Create a function (mean g) that returns the mean of a list g 
+
+Description
+
+Possible solution:
+(define Mean (lambda (g)
+              (list (/ (foldl + 0 g)
+                 (foldl (lambda (value previous)
+                          (+ 1 previous)) 0 g)))))
+=======================
+Question 55:
+Programming question:
+Write a function (sqrtList g) to find the square root of all numbers within a list.
+
+Possible solution:
+(define sqrtList
+  (lambda (g)
+    (if (null? g)
+        (list)
+        (cons (sqrt (first g))(sqrtList (rest g)))
+)))
+=======================
+Question 56:
+Programming question:
+Given a list, return the list with the first element swapped with the second, the third element swapped with the fourth, etc.
+
+Description
+
+Possible solution:
+(define swapList
+  (lambda (g)
+    (if (null? g)
+        (list)
+        (if (null? (rest g))
+            g
+            (cons (first (rest g))
+                  (cons (first g)
+                        (swapList (rest (rest g)))))))))
+
+Test Cases:
+(define g (list 1 2 3 4))
+(swapList g)
+(define b (list 7 8 9 4 5))
+(swapList b)
+=======================
+Question 57:
+Programming question:
+Given a list, return the list with the first element swapped with the second, the third element swapped with the fourth, etc.
+
+Description
+
+Possible solution:
+(define swapList
+  (lambda (g)
+    (if (null? g)
+        (list)
+        (if (null? (rest g))
+            g
+            (cons (first (rest g))
+                  (cons (first g)
+                        (swapList (rest (rest g)))))))))
+
+Test Cases:
+(define g (list 1 2 3 4))
+(swapList g)
+(define b (list 7 8 9 4 5))
+(swapList b)
+=======================
+Question 58:
+Programming question:
+
+Write a function that inputs a list and returns every element divided by 2
+
+Possible solution:
+
+(define g (build-list 10 (lambda (n) (random 10))))
+g
+
+(define half
+  (lambda (g)
+    (if (null? g)
+        (list)
+        (cons (/ (first g) 2) (half (rest g))))))
+(half g)
+=======================
+Question 59:
+(define g (list 0 1 2 3 4 5))
+(define lengthfunction (lambda (g) (foldl (lambda (n previous) (+ 1 previous)) 0 g)))
+(lengthfunction g)
+(length g
