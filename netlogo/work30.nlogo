@@ -1,21 +1,21 @@
-to randomColor
+to setup
   ca
+  reset-ticks
+  ifelse equalDistribution
+  [ randomEqual ]
+  [ randomColor ]
+  tick
+end
+
+to randomColor
   ask patches
   [
     set pcolor random colors * 10 + 5
   ]
 end
 
-to randomEqual3
-  ca
-  let np (count patches / 3)
-  ask n-of np patches [ set pcolor violet ]
-  ask n-of np patches with [ pcolor != violet ] [set pcolor cyan ]
-  ask patches with [ pcolor != violet and pcolor != cyan ] [set pcolor yellow ]
-end
 
 to randomEqual
-  ca
   let c 5
   repeat colors
   [
@@ -23,6 +23,18 @@ to randomEqual
     [ set pcolor c ]
     set c c + 10
   ]
+  ask patches with [pcolor = black]
+  [ set pcolor random colors * 10 + 5 ]
+end
+
+to colorSwap
+  wait 0.1
+  ask patches[
+    let aset patches
+    if neighborsOnly [ set aset neighbors ]
+    set pcolor [pcolor] of one-of aset
+  ]
+  tick
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
@@ -53,28 +65,28 @@ ticks
 30.0
 
 SLIDER
-6
-270
-178
-303
+19
+272
+191
+305
 colors
 colors
 0
 14
-3.0
+5.0
 1
 1
 NIL
 HORIZONTAL
 
 BUTTON
-44
-313
-158
-346
-randomColor
-randomColor\n\n
+55
+425
+150
+458
 NIL
+colorSwap
+T
 1
 T
 OBSERVER
@@ -84,96 +96,55 @@ NIL
 NIL
 1
 
-BUTTON
-41
-405
-164
-438
-NIL
-randomEqual
-NIL
-1
-T
-OBSERVER
+PLOT
+6
+29
+206
+179
+plot 1
 NIL
 NIL
-NIL
-NIL
-1
+0.0
+10.0
+0.0
+10.0
+true
+false
+"" ""
+PENS
+"gray" 1.0 0 -7500403 true "" "plot count patches with [pcolor = 5]"
+"red" 1.0 0 -2674135 true "" "plot count patches with [pcolor = 15]"
+"pen-2" 1.0 0 -955883 true "" "plot count patches with [pcolor = 25]"
+"pen-3" 1.0 0 -6459832 true "" "plot count patches with [pcolor = 35]"
+"pen-4" 1.0 0 -1184463 true "" "plot count patches with [pcolor = 45]"
+"pen-5" 1.0 0 -10899396 true "" "plot count patches with [pcolor = 55]"
+"pen-6" 1.0 0 -13840069 true "" "plot count patches with [pcolor = 65]"
+"pen-7" 1.0 0 -14835848 true "" "plot count patches with [pcolor = 75]"
+"pen-8" 1.0 0 -11221820 true "" "plot count patches with [pcolor = 85]"
+"pen-9" 1.0 0 -13791810 true "" "plot count patches with [pcolor = 95]"
+"pen-10" 1.0 0 -13345367 true "" "plot count patches with [pcolor = 105]"
+"pen-11" 1.0 0 -8630108 true "" "plot count patches with [pcolor = 115]"
+"pen-12" 1.0 0 -5825686 true "" "plot count patches with [pcolor = 125]"
+"pen-13" 1.0 0 -2064490 true "" "plot count patches with [pcolor = 135]"
 
-MONITOR
-133
-115
-185
-160
-Cyan
-count patches with [pcolor = cyan]
-17
-1
-11
-
-MONITOR
-132
-165
-189
+SWITCH
+25
 210
-Violet
-count patches with [pcolor = violet]
-17
+189
+243
+equalDistribution
+equalDistribution
 1
-11
-
-MONITOR
-128
-15
-187
-60
-Orange
-count patches with [pcolor = orange]
-17
 1
-11
-
-MONITOR
-6
-14
-64
-59
-gray
-count patches with [pcolor = 5]
-17
-1
-11
-
-MONITOR
-67
-15
-125
-60
-red
-count patches with [pcolor = 15]
-17
-1
-11
-
-MONITOR
-68
-66
-119
-111
-Yellow
-count patches with [pcolor = yellow]
-17
-1
-11
+-1000
 
 BUTTON
-44
-357
-165
-390
+77
+322
+143
+355
 NIL
-randomEqual3\n\n
+setup
 NIL
 1
 T
@@ -184,93 +155,16 @@ NIL
 NIL
 1
 
-MONITOR
-7
-65
-64
-110
-brown
-count patches with [pcolor = brown]
-17
+SWITCH
+24
+376
+173
+409
+neighborsOnly
+neighborsOnly
+0
 1
-11
-
-MONITOR
-131
-67
-188
-112
-green
-count patches with [pcolor = green]
-17
-1
-11
-
-MONITOR
-7
-114
-64
-159
-lime
-count patches with [pcolor = lime]
-17
-1
-11
-
-MONITOR
-69
-116
-125
-161
-turquoise
-count patches with [pcolor = turquoise]
-17
-1
-11
-
-MONITOR
-6
-162
-63
-207
-sky
-count patches with [pcolor = sky]
-17
-1
-11
-
-MONITOR
-68
-164
-125
-209
-blue
-count patches with [pcolor = blue]
-17
-1
-11
-
-MONITOR
-6
-211
-72
-256
-magenta
-count patches with [pcolor = magenta]
-17
-1
-11
-
-MONITOR
-77
-212
-134
-257
-pink
-count patches with [pcolor = pink]
-17
-1
-11
+-1000
 
 @#$#@#$#@
 ## WHAT IS IT?

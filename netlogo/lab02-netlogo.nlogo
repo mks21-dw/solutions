@@ -1,29 +1,126 @@
-to randomColor
+; For this assignment, you will need to create procedures
+; and interface elements.
+; Use this example as your guide:
+; http://homer.stuy.edu/~dw/netlogo/lab02_obf.html
+
+;=========================================
+; Buttons
+;
+; Most procedures should have a corresponding button.
+; If the button is meant to be a forever button it
+; will be mentioned above the procedure.
+;
+; Add buttons for the pend-down and pen-up commands.
+; These will be helpful for testing your code.
+
+;=========================================
+; Sliders
+; numTurtles: range should be [1, 100] with all
+; integers in that range available.
+;
+; stepSize: range should be [0.0, 5.0] possible values
+; should be 0.0, 0.1, 0.2, 0.3 0.4 ...
+;=========================================
+
+;=========================================
+;Procedures
+
+;=========================================
+; setupRow (normal button)
+; Clear the screen.
+; Make enough turtles so there is one per
+; patch along the y axis.
+; Each turlte should be on the left side of
+; the world, on its own patch.
+; Each turtle should face right.
+ to setupRow
   ca
-  ask patches
-  [
-    set pcolor random colors * 10 + 5
+  cro 33 [
+    set xcor -16
+    set ycor 16 - who
+    set heading 90
   ]
 end
 
-to randomEqual3
-  ca
-  let np (count patches / 3)
-  ask n-of np patches [ set pcolor violet ]
-  ask n-of np patches with [ pcolor != violet ] [set pcolor cyan ]
-  ask patches with [ pcolor != violet and pcolor != cyan ] [set pcolor yellow ]
+;=========================================
+; stamp4 (normal button)
+; A turle should move forward 1 step.
+; Every 4 steps, a turtle should leave a
+; stamp of iteself.
+to stamp4
+  if xcor mod 4 = 0 [stamp]
+  fd 1
 end
 
-to randomEqual
+;=========================================
+; wiggle (no button)
+; This procedure is to create random turtle movement.
+; It should be used in soem of the methods below.
+; When you have created the stepSize slider, modify
+; this code so the turtle moves forward by that amount.
+to wiggle
+  rt random 360
+  fd stepSize
+end
+
+;=========================================
+; setup (normal button)
+; clear the screen
+; make numTurtles (slider) turtles
+to setup
   ca
-  let c 5
-  repeat colors
+  cro numTurtles
+end
+
+
+;=========================================
+; slant (forever button)
+; A turtle should move randomly.
+; pick 2 colors, turtles should be one
+; of those 2 colors based on if they are
+; above or below a diagonal going from
+; the bottom-left to top-right corner of the world.
+to slant
+  wiggle
+  ifelse (xcor > ycor)
+  [set color blue]
+  [set color red]
+end
+
+;=========================================
+; diagonal (forever button)
+; A turtle should move randomly.
+; pick 2 colors, turtles should be one
+; of those 2 colors based on their position
+; in the world. Use the sample program linked
+; above to see this pattern.
+to diagonal
+  wiggle
+  ifelse ycor > 0
   [
-    ask n-of (count patches / colors) patches with [pcolor = black]
-    [ set pcolor c ]
-    set c c + 10
+    ifelse  xcor > ycor
+    [ set color blue ]
+    [ set color red ]
+  ]
+  [
+    ifelse xcor > ycor
+    [set color red]
+    [set color blue]
   ]
 end
+
+;=========================================
+; trap (forever button)
+; If a turtle is within a square bound by
+; 10 and -10 in both x and y, it move randomly.
+; If it goes outside that range, is should be
+; sent back to the origin.
+to trap
+  ifelse abs xcor < 10 and abs ycor < 10
+  [ wiggle ]
+  [ setxy 0 0 ]
+end
+
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
@@ -52,28 +149,111 @@ GRAPHICS-WINDOW
 ticks
 30.0
 
+BUTTON
+69
+169
+135
+202
+NIL
+setup\n
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+36
+220
+99
+253
+NIL
+pd
+NIL
+1
+T
+TURTLE
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+105
+220
+168
+253
+NIL
+pu
+NIL
+1
+T
+TURTLE
+NIL
+NIL
+NIL
+NIL
+1
+
 SLIDER
-6
-270
-178
-303
-colors
-colors
+11
+257
+183
+290
+stepSize
+stepSize
 0
-14
-3.0
+5
+1.0
+.1
+1
+NIL
+HORIZONTAL
+
+BUTTON
+53
+354
+116
+387
+NIL
+slant
+T
+1
+T
+TURTLE
+NIL
+NIL
+NIL
+NIL
+1
+
+SLIDER
+17
+129
+189
+162
+numTurtles
+numTurtles
+1
+100
+30.0
 1
 1
 NIL
 HORIZONTAL
 
 BUTTON
-44
-313
-158
-346
-randomColor
-randomColor\n\n
+46
+19
+144
+52
+NIL
+setupRow\n
 NIL
 1
 T
@@ -85,192 +265,55 @@ NIL
 1
 
 BUTTON
-41
-405
-164
-438
+47
+58
+125
+91
 NIL
-randomEqual
+stamp4\n
 NIL
 1
 T
-OBSERVER
+TURTLE
 NIL
 NIL
 NIL
 NIL
 1
 
-MONITOR
-133
-115
-185
-160
-Cyan
-count patches with [pcolor = cyan]
-17
+BUTTON
+44
+396
+129
+429
+NIL
+diagonal
+T
 1
-11
-
-MONITOR
-132
-165
-189
-210
-Violet
-count patches with [pcolor = violet]
-17
+T
+TURTLE
+NIL
+NIL
+NIL
+NIL
 1
-11
 
-MONITOR
-128
-15
-187
-60
-Orange
-count patches with [pcolor = orange]
-17
-1
-11
-
-MONITOR
-6
-14
-64
-59
-gray
-count patches with [pcolor = 5]
-17
-1
-11
-
-MONITOR
-67
-15
-125
-60
-red
-count patches with [pcolor = 15]
-17
-1
-11
-
-MONITOR
-68
-66
+BUTTON
+56
+311
 119
-111
-Yellow
-count patches with [pcolor = yellow]
-17
-1
-11
-
-BUTTON
-44
-357
-165
-390
+344
 NIL
-randomEqual3\n\n
-NIL
+trap
+T
 1
 T
-OBSERVER
+TURTLE
 NIL
 NIL
 NIL
 NIL
 1
-
-MONITOR
-7
-65
-64
-110
-brown
-count patches with [pcolor = brown]
-17
-1
-11
-
-MONITOR
-131
-67
-188
-112
-green
-count patches with [pcolor = green]
-17
-1
-11
-
-MONITOR
-7
-114
-64
-159
-lime
-count patches with [pcolor = lime]
-17
-1
-11
-
-MONITOR
-69
-116
-125
-161
-turquoise
-count patches with [pcolor = turquoise]
-17
-1
-11
-
-MONITOR
-6
-162
-63
-207
-sky
-count patches with [pcolor = sky]
-17
-1
-11
-
-MONITOR
-68
-164
-125
-209
-blue
-count patches with [pcolor = blue]
-17
-1
-11
-
-MONITOR
-6
-211
-72
-256
-magenta
-count patches with [pcolor = magenta]
-17
-1
-11
-
-MONITOR
-77
-212
-134
-257
-pink
-count patches with [pcolor = pink]
-17
-1
-11
 
 @#$#@#$#@
 ## WHAT IS IT?
@@ -614,7 +657,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.4.0
+NetLogo 6.3.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
