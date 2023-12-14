@@ -1,0 +1,905 @@
+
+=======================
+Question 0:
+;Programming question:
+;Write a code that moves the turtle to 0,0.
+;The turtle must move there and cannot be teleported.
+;
+;Possible solution:
+=======================
+Question 1:
+;Programming question: Write the program that makes horizontal lines covering the screen, 1 patch thick, random colors
+;
+;Description
+;
+;Possible solution:
+=======================
+Question 2:
+;Programming question:
+;Make the whole screen into a checkered pattern with a box that changes in size based on a slider
+;Description
+;checkered 1 patch by 1 patch
+;Possible solution:
+;to checkers
+; ca
+; ask patches [
+;  if pxcor mod 2 = pycor mod 2
+;    [
+;      set pcolor white
+;    ]
+;  ]
+; ask patches [
+;    if pxcor > (-1 * boxSize) and pxcor < boxSize and pycor > (-1 * boxSize) and pycor < boxSize
+;  [
+;    set pcolor white
+;  ]]
+;end
+=======================
+Question 3:
+;Programming question:
+; Write a procedure that clears the screen, then covers the entire screen in horizontal stripes spanning the
+;whole way 1 patch thick.  The stripes should alternate between two random true netlogo colors determined every time
+;the procedure is run.
+;Description
+; Produce randomly colored uniform stripes
+;Possible solution:
+;
+=======================
+Question 4:
+;Programming question: Make a program called setup that uses slider "numTurtles" to determine the amount of turtles facing up side to side at the bottom
+;
+;Description
+;The turtles at the bottom have to be 1 patch apart.
+;Possible solution:
+;
+to setup
+  ca
+  crt numTurtles [set heading 0 set xcor who - 16 set ycor -16]
+end
+=======================
+Question 5:
+;Programming question:
+;Create a setup function that clear the world and creates two turtles
+;at two random positions. The colorSwap function should be a turtle procedure
+;that switches the two turtles' colors.
+;
+;Possible solution:
+;
+=======================
+Question 6:
+;Programming question:
+;Write a command that would make a (+) design
+;
+;Possible solution:
+=======================
+Question 7:
+;Programming question:
+;Clear all then create 10 turtles have them move randomly and then change the turtles to a random color
+;Possible solution:
+;to solution
+; ca
+  ;crt 10
+  ;ask turtles [right random 360 fd 1]
+  ;ask turtles [set color random 140]
+;end
+=======================
+Question 8:
+ang racket
+
+;Question 4
+(define slope
+  (lambda (y2 y1 x2 x1)
+    (/ (- y2 y1)(- x2 x1))))
+
+(slope 4 2 4 2)
+
+;Question 18
+(define avg5
+  (lambda (a b c d e)
+    (/ (+ a b c d e)5)))
+
+(avg5 5 5 4 3 3)
+
+;Question 5
+(define something
+  (lambda (a b)
+=======================
+Question 9:
+;Programming question:
+; Create a checkered pattern in netlogo with a white box that changes in size in the middle. 
+;Description
+; 1 patch by 1 patch checker pattern, white box will change based on the slider. 
+;Possible solution:
+;to checkers
+;  ask patches [
+;  if pxcor mod 2 = pycor mod 2
+;    [set pcolor white]
+;  ]
+;  if pycor > -1 * boxSize and pycor < boxSize and 
+;  pxcor > -1 * boxSize and pxycor < boxSize
+; [set pcolor white]
+;end
+;########
+=======================
+Question 10:
+;Programming question:
+;Create three turtles facing up, lined up in a row at the origin.
+;
+;Possible solution:
+=======================
+Question 11:
+;Programming question:
+;doubleSquare
+;Description
+;Draw a square
+;Draw another square inside the first square
+;Size and length don't matter
+;Possible solution:
+;to doubleSquare
+;  ca
+;  crt 1
+;  ask turtles
+;  [
+;    pd
+;   repeat 4
+;   [
+;     fd 10 rt 90
+;    ]
+;    pu
+;    rt 45 fd 4
+;    pd
+;    repeat 4
+;    [
+;     fd 3 rt 90
+;    ]
+;  ]
+;end
+=======================
+Question 12:
+s not correct
+to origin
+  ifelse [xcor = 0] and [ycor = 0]
+  [
+  ]
+  [
+    fd 1
+    rt (random 360)
+    origin
+  ]
+end
+=======================
+Question 13:
+;Programming question:
+;
+Create a pattern that resembles a waffle
+;
+;Possible solution:
+;to checker
+  ifelse (pxcor mod 2 = 0 and pycor mod 2 = 0)
+  [set pcolor sky]
+  [set pcolor lime]
+end
+;########
+=======================
+Question 14:
+;Programming question: Make a program that resets the board and creates 10 turtles. These turtles move randomly and change color randomly every time the function is called.
+;
+;Possible solution:
+;
+;to solution
+;  ca
+;  crt 10
+;  ask turtles [right random 360 fd 1]
+;  ask turtles [set color random 140]
+;end
+=======================
+Question 15:
+;Programming question:
+;Build a procedure named colorSwapBox
+;
+;Patches within the range of 5 and -5 in both x and y can have any random color.
+;Patches outside that range but within 10 and -10 in both x and y can only be colors: red or blue
+;Patches outside of 10 and -10 range are black
+;
+;
+;Description
+;
+;Possible solution:
+;
+;########
+=======================
+Question 16:
+;Programming question:
+; Create a pattern that represents a waffle.
+;Description
+;
+;Possible solution:
+; to pattern
+; ifelse (pxcor mod 2 = 0 and pycor mod 2 = 0)
+ [ set pcolor sky]
+ [set pcolor lime]
+end
+;########
+=======================
+Question 17:
+;Programming question:
+doubleSquare
+-Draw a square
+-Draw another square inside the first square
+-Size and length don't matter
+;Description
+;
+;Possible solution:
+to doubleSquare
+  ca
+  crt 1
+  [
+    pd 
+    repeat 4 [fd 5 rt 90]
+    pu
+    fd 1
+    rt 90
+    fd 1
+    lt 90
+    pd
+    repeat 4 [fd 3 rt 90]
+  ]
+end
+  
+;########
+=======================
+Question 18:
+;Programming question: Make a function called setup that uses slider with variable "numTurtles" to determine the amount of turtles facing up at the bottom
+;
+;Description
+;The turtles at the bottom need to be 1 patch apart
+;Possible solution:
+;
+
+to setup
+  ca
+  crt numTurtles [set heading 0 set xcor who - 16 set ycor -16]
+end
+=======================
+Question 19:
+;Programming question:
+;Write a procedure that creates 10 turtles, each facing a different direction
+;Description
+;
+;Possible solution:
+;to whereTurtle
+;  crt 10
+; [set heading 0 (right 36 * who + 1)]
+; ask turtles [fd 5]
+;end
+=======================
+Question 20:
+;Programming question: Write a program that will make horizontal lines of patches, each line a random color out of all NetLogo colors, 1 patch thick.
+;
+;DescriptionWrite a program that will make horizontal lines of patches, each line a random color out of all NetLogo colors, 1 patch thick.
+;
+;Possible solution:
+;
+=======================
+Question 21:
+#
+;Programming question:
+;Write a procedure that will clear the screen and use a turtle to draw a house in the world.
+;
+;Possible solution:
+=======================
+Question 22:
+;Programming question:
+; Write a procedure that clears the screen, then covers the entire screen in horizontal stripes spanning the
+;whole way 1 patch thick.  The stripes should alternate between two random true netlogo colors determined every time
+;the procedure is run.
+;Description
+; Produce randomly colored uniform stripes
+;Possible solution:
+;
+=======================
+Question 23:
+;Programming question:
+;Create a netlogo function called whitep that clears all and makes patches with even y and x cor white.
+;Description
+;
+;Possible solution:
+;
+to whitep
+ca
+ask patches with [(pxcor mod = 0) and (pyxor mod = 0)] [set pcolor white]
+end
+=======================
+Question 24:
+;Programming question:
+;Create a function "zombie" that will make turtles with their color green to move
+;forward 1 in a random direction (up, down, left, right) and turn all the other turtles on
+;the same patch's color to green
+;
+;Possible solution:
+=======================
+Question 25:
+;Programming question:
+;Create a netlogo function that 
+;Clears all
+;Finds every pcor with an even x and y value
+;Makes each of those patches white
+
+;
+;Possible solution:
+=======================
+Question 26:
+;Programming question:
+;
+;Description
+;Write a procedure that creates 10 turtles, each facing a different direction.
+;Possible solution:
+;to whereTurtle
+;ca
+;crt 10
+;[set heading 0 (right 36 * who + 1)]
+;ask turtles [fd 5]
+;end
+;
+=======================
+Question 27:
+;Programming question: 
+; Write a function ``trapColors``
+
+;Description
+; Interface: ``trapColors`` button, ``corRange`` slider from 1-17, ``colors`` slider from 1-14
+; Must be in Observer Context
+; Clear Screen
+; Patches within a certain xcor and ycor range set their color to a random true color
+; The xcor and ycor range is determined by the ``corRange`` slider
+; The number of true colors available is determined by the ``colors`` slider 
+
+;Possible solution:
+to trapColors
+  ca
+  ask patches 
+  [if abs pxcor < corRange and abs pycor < corRange
+    [set pcolor (random colors) * 10 + 5]]
+end 
+;########
+=======================
+Question 28:
+;Programming question: Write a program that will create 3 turtles lined up and facing up with the middle
+;turtle at the origin.
+;Possible solution:
+;to setup
+  ;ca
+  ;crt 3
+  ;[set heading 0]
+  ;ask turtle 1 [rt 270 fd 5]
+  ;ask turtle 2 [rt 90 fd 5]
+  ;ask turtles [set heading 0]
+;end
+=======================
+Question 29:
+MC Question:
+Which command do you have to use before using ticks?
+
+Options:
+A) reset-ticks
+B) restart-ticks
+C) start-ticks
+D) set-ticks
+
+Answer: A
+=======================
+Question 30:
+;Programming question:
+;Write a procedure that clears the screen, creates 10 equally spaced turtles, and has them each draw a pentagon.
+;Description
+;
+;Possible solution:
+;to pentagon
+ ; ca
+  ;cro 10
+  ;ask turtles [
+   ; pd
+    ;repeat 5 [fd 5 rt 72]]
+;end
+=======================
+Question 31:
+;Programming question:
+; Divide the interface into two colors with patches
+;Description
+; Divide the interface into two colors with patches. Use the function colorStripes to do this.
+;Possible solution:
+;to colorStripes
+  set pcolor red
+  if pxcor > 0
+  [set pcolor yellow]
+ if pxcor < 0
+  [set pcolor red]
+end
+;########
+=======================
+Question 32:
+;;Programming question:
+;;Write a function, quadrantColor, that makes makes quadrant I red, quadrant II
+;;orange, quadrant III yellow and quadrant IV green
+;;Possible solution:
+
+to quadrantColor
+  if (pxcor < 0 and pycor < 0)
+  [set pcolor yellow]
+  if (pxcor < 0 and pycor > 0)
+  [set pcolor orange]
+  if (pxcor > 0 and pycor > 0)
+  [set pcolor red]
+  if (pxcor > 0 and pycor < 0)
+  [set pcolor green]
+end
+=======================
+Question 33:
+ion:
+;Which of the following is not a property of a patch?
+;A) pycor
+;B) pxcor
+;C) color
+;D) all options are properties of a patch
+;Answer
+; C
+;#########
+
+;#########
+;Programming question:
+;Write a procedure that will clear the screen, create 5 turtles, move them forward two to five units, and set the patches they are on top of the same color as the turtle.
+;
+;Possible solution:
+;#########
+to _A
+  ca
+  crt 5
+  ask turtles
+  [fd (2 + (random 4))
+    set pcolor color]
+end
+=======================
+Question 34:
+#########
+;MC Question:
+; What is emergent behavior?
+
+;Options:
+; A) A system with complex rules that generates complex behaviors
+; B) A system with complex rules that generates simple behaviors
+; C) A system with simple rules that generates complex behaviors
+; D) A system with simple rules that generates simple behaviors
+;Answer: C
+;##########
+
+;##########
+;Programming question:
+;Create a procedure named gradient that uses the shades of pink (135, 136, 137, 138) and sets the color of the patches to one of the shades (starting from 135) every 8 patches (besides the last row, which is 9 patches).
+
+;Possible solution:
+;to gradient
+;  ask patches with [pycor > 8] [set pcolor 135]
+;  ask patches 
+;  [ if pycor > 0 and pycor < 9 [set pcolor 136] ]
+;  ask patches 
+;  [ if pycor < 1 and pycor > -8 [set pcolor 137] ]
+;  ask patches 
+;  [ if pycor < -7 and pycor >= -16 [set pcolor 138] ]
+;end 
+;#########
+=======================
+Question 35:
+;Programming question:
+;Create two functions.
+;The first one is called setup, it clears the screen and creates a turtle.
+;The second one is called drawTurtles, you are able to draw lines using the turtle, it should be a forever button.
+;Description
+;The turtle should follow the mouse, but only leave a line if the mouse is down.
+;Possible solution:
+=======================
+Question 36:
+;Programming question:
+;Write a command for observer that clears the screen and then spawns 17 gray
+;turtles in a line starting at the origin and facing upwards
+;
+;Possible solution:
+=======================
+Question 37:
+;Programming question:
+; Create a function known as DoubleRandom that clears-all and then has every patch
+;pick a random color and then switch to another patch's color, forever button.
+;Description
+; Clear-all, give each patch a random color, have patches switch to another patch's color, forever button
+;Possible solution:
+;to DoubleRandom
+;ca
+; ask patches [set pcolor random 140]
+; wait 0.5
+; ask patches [set pcolor [pcolor] of patch (random pxcor) (random pycor)]
+; end
+;#########
+=======================
+Question 38:
+;Programming question:
+;Set each column in the netlogo world to a random color (each patch with the same x coordinate should have the
+;same color and each patch with a different y coordinate should have a different color)
+;
+;Possible solution:
+;to yColor
+;  ask patches with [pycor = 0] [set pcolor (random 14) * 10 + 5]
+;  ask patches with [pycor != 0] [set pcolor [pcolor] of patch pxcor 0] 
+;end
+;########
+=======================
+Question 39:
+;Programming question:
+; Create a function known as DoubleRandom that clears-all and then has every patch
+;pick a random color and then switch to another patch's color, forever button.
+;Description
+; Clear-all, give each patch a random color, have patches switch to another patch's color, forever button
+;Possible solution:
+;to DoubleRandom
+;ca
+; ask patches [set pcolor random 140]
+; wait 0.5
+; ask patches [set pcolor [pcolor] of patch (random pxcor) (random pycor)]
+; end
+;#########
+=======================
+Question 40:
+;Programming question:
+;Create a function that clears all and draws a stripe spaced "width" apart.
+;
+;Description
+;
+;Possible solution:
+to stripe [width]
+  ca
+  ask patches [if pxcor mod (width + 1) = 0
+    [set pcolor pink]]
+end
+=======================
+Question 41:
+;Programming Question: Write a command called "setup" for observer that creates 15 gray turtles facing the same direction.
+;
+;Description
+;
+;Possible solution:
+to setup
+  ca
+  repeat 15 [ cro 1 ]
+end
+;
+=======================
+Question 42:
+;Programming question: stripes
+; Set each column in the netlogo world to a random color (each patch with the same x coordinate should have the same color and each patch with a different y coordinate should have a different color).
+; Colors can be repeated
+;Possible solution:
+;to stripes
+  ;ask patches with [pycor = 0] [set pcolor random 14 * 10 + 5]
+  ;ask patches with [pycor != 0] [set pcolor [pcolor] of patch pxcor 0]
+;end
+=======================
+Question 43:
+;Programming question:
+;create numPolygons polygons with numSides sides of sideLength length equidistant from each other and their centers distFromMiddle away from middle of the world
+;Description
+; sliders: numPolygons [2,6] , numSides [3,10] , sideLength [1,3] , distFromMiddle [1,10]
+;Possible solution:
+to equalShapes
+  ca
+  crt numPolygons
+  ask turtle 0
+  [set heading 0]
+  ask turtle 1
+  [set heading 360 / numPolygons]
+  if numPolygons > 2
+  [ask turtle 2
+    [set heading 360 * 2 / numPolygons]]
+  if numPolygons > 3
+  [ask turtle 3
+    [set heading 360 * 3 / numPolygons]]
+  if numPolygons > 4
+  [ask turtle 4
+    [set heading 360 * 4 / numPolygons]]
+  if numPolygons > 5
+  [ask turtle 5
+    [set heading 360 * 5 / numPolygons]]
+  ask turtles [
+  fd distFromMiddle
+  rt 360 / numSides
+  fd sideLength
+    pd
+  rt 180 / numSides
+    fd sideLength
+     repeat numSides [rt 360 / numSides
+    fd sideLength
+  ]]
+end
+=======================
+Question 44:
+;Programming question:
+;Description
+;Write a procedure called funniPattern
+;The procedure should create 1 turtle facing up that then creates a pattern consisting of 10 hexagons drawn around one point, each drawn after rotating 36 degrees.
+;Sides should be 5 patches long
+;Possible solution:
+;to funniPattern
+;crt 1 [ set heading 0]
+;ask turtles [repeat 10 [rt 36 pd repeat 6 [fd 5 rt 60] pu ] ]
+=======================
+Question 45:
+;Programming question:
+; Create a Netlogo program setup that sets each row of patches to be a random Netlogo color
+; (all patches of a row must be the same color). Then, when a button rowMover is clicked, have all
+; rows get shifted down once, with the color of the row at the bottom becoming the color
+; of the row at the top.
+;
+;Possible solution:
+=======================
+Question 46:
+n a turtle NOT do?
+; A) Change its shape into preselected images
+; B) Move around the field
+; C) Change the color of itelf and its surroundings
+; D) Send commands to the observer
+
+;Question 2
+; A) set pcolor ___
+; B) set color ___
+; C) color = ___
+; D) pxycol = (___)
+
+;Question 3
+; Write a program that sets half of the patches on the field to red and the other to blue,
+; With a dividing black line between them.
+;Answer
+
+to half
+  set pcolor black
+  if (pxcor < 0)
+  [set pcolor red]
+  if (pxcor > 0)
+  [set pcolor blue]
+end
+=======================
+Question 47:
+;Programming question: Create a gradient of pink from 135 to 138 with the darkest color going down
+;
+;Description
+;
+;Possible solution:
+;
+=======================
+Question 48:
+;Programming question:
+; Create a function called drawTurtle in which you are able to draw lines using turtles.
+;Description
+; If the left mouse button is down, the turtle will follow where the mouse is, leaving a line where the mouse has been.
+;Possible solution:
+;
+=======================
+Question 49:
+ion: How many true netlogo colors are there?
+;Options:
+;A) 13
+;B) 14
+;C) 140
+;D) Infinitely many colors
+;Answer: B
+;#########
+
+;Programming question: Write a function called quadrantColor where each quadrant
+;should be of different color.
+;
+;Description: In this function,
+;each quadrant I, II, III, IV, should be the color red, orange, yellow, green
+;respectively. The y and x axies should be the color white.
+
+;Possible solution:
+to quadrantColor
+  if (pycor = 0)
+  [set pcolor white]
+  if (pxcor = 0)
+  [set pcolor white]
+  if (pycor > 0 and pxcor > 0)
+  [set pcolor red]
+  if (pycor > 0 and pxcor < 0)
+  [set pcolor orange]
+  if (pycor < 0  and pxcor < 0)
+  [set pcolor yellow]
+  if (pycor < 0 and pxcor > 0)
+  [set pcolor green]
+end
+=======================
+Question 50:
+;Programming question:
+;Description
+;write a program called funniPattern that creates one turtle facing up that then creates a pattern of 10 hexagons drawn around one point, each drawn after rotating 36 degrees. Side length shoould be 5.
+;Possible solution:
+;to funniPattern
+;  crt 1
+ ; [
+  ;  set heading 0
+  ;]
+  ;ask turtles
+ ; [
+ ; repeat 10
+ ; [rt 36
+ ;  pd
+ ; repeat 6
+ ;   [
+;      fd 5
+;      rt 60
+;    ]
+;    pen-up
+;  ]
+;  ]
+;end
+=======================
+Question 51:
+;Programming question: 
+;Create a function that creates vertical stripes, equally spaced 
+;Possible solution:
+to stripe [width]
+  ask patches [ifelse pxcor max (width + 1) = 0
+    [set pcolor pink]
+    [set pcolor cyan]
+end 
+;
+;########
+=======================
+Question 52:
+;Programming question:
+;Write programs
+;"setup" : clear all and create a bunch of turtles in a formation that spells out "hello" and make them all the same random color
+;"go" : all turtles move in the same direction based on slider "orientation". When reach the edge, should bounce to a random direction and change color.
+;Description : create slider called "orientation" and assume the edge coordinates are 16 and -16
+;
+;Possible solution:
+;;To setup
+;ca
+;let randomcolor (random 140)
+;crt 5 [setxy -2 who - 2]
+;crt 1 [setxy -3 0]
+;crt 5 [setxy -4 who - 8]
+;crt 1 [setxy 0 -2]
+;crt 1 [setxy 0 -1]
+;crt 1 [setxy 0 0]
+;crt 1 [setxy 0 1]
+;crt 1 [setxy 0 2]
+;crt 1 [setxy 1 2]
+;crt 1 [setxy 2 2]
+;crt 1 [setxy 1 0]
+;crt 1 [setxy 2 0]
+;crt 1 [setxy 1 -2]
+;crt 1 [setxy 2 -2]
+;crt 1 [setxy 4 2]
+;crt 1 [setxy 4 1]
+;crt 1 [setxy 4 0]
+;crt 1 [setxy 4 -1]
+;crt 1 [setxy 4 -2]
+;crt 1 [setxy 5 -2]
+;crt 1 [setxy 6 -2]
+;crt 1 [setxy 8 2]
+;crt 1 [setxy 8 1]
+;crt 1 [setxy 8 0]
+;crt 1 [setxy 8 -1]
+;crt 1 [setxy 8 -2]
+;crt 1 [setxy 9 -2]
+;crt 1 [setxy 10 -2]
+;crt 1 [setxy 12 2]
+;crt 1 [setxy 12 1]
+;crt 1 [setxy 12 0]
+;crt 1 [setxy 12 -1]
+;crt 1 [setxy 12 -2]
+;crt 1 [setxy 13 -2]
+;crt 1 [setxy 14 -2]
+;crt 1 [setxy 13 2]
+;crt 1 [setxy 14 2]
+;crt 1 [setxy 14 -1]
+;crt 1 [setxy 14 0]
+;crt 1 [setxy 14 1]
+;ask turtles [set color randomcolor]
+;crt 1 [setxy -5 0 set color [pcolor] of patch 0 0]
+;crt 1 [setxy 0 3 set color [pcolor] of patch 0 0]
+;crt 1 [setxy 15 0 set color [pcolor] of patch 0 0]
+;crt 1 [setxy 0 -3 set color [pcolor] of patch 0 0]
+;
+;end
+;
+;to changeheading
+; let randomc random 140
+;ask turtles[
+;   set color randomc
+;ifelse heading < 180
+;[set orientation random 61 + 120 + [heading] of turtle 0]
+;[set orientation ([heading] of turtle 0) - 120 - random 61]
+;  fd -1]
+; ask turtle 48 [set color black]
+; ask turtle 49 [set color black]
+; ask turtle 50 [set color black]
+; ask turtle 51 [set color black]
+;end
+;
+;to go
+;ask turtles [set heading orientation
+;  fd 0.3]
+;let a (turtle 48)
+;let b (turtle 49)
+;let c (turtle 50)
+;let d (turtle 51)
+;  wait 0.03
+;if [pxcor] of a = 15
+;or [pycor] of b = -15
+;or [pxcor] of c = -15
+;or [pycor] of d = 15
+;[changeheading]
+;end
+=======================
+Question 53:
+;Programming question:
+; Create a Netlogo program that sets each row of patches to be a random Netlogo color
+; (all patches of a row must be the same color). Then, when a button is clicked, have all
+; rows get shifted down once, with the color of the row at the bottom becoming the color
+; of the row at the top.
+;
+;Possible solution:
+=======================
+Question 54:
+;Programming question:
+;Divide the interface into three equal sections vertically and set the patches in these sections three different color. The color of each section should be the same in order to create 3 "stripes".
+;
+;Possible solution:
+=======================
+Question 55:
+;Programming question: create an hourglass using turtle(s)
+;Description
+;It should be a forever function
+;if xcor^2 <= ycor the turtle will be red
+;if -xcor^2 >= ycor the turtle will also be red
+;otherwise the turtle will be blue
+;you will be given the following code
+to setup
+  ca
+  crt 1
+  ask turtles [pd]
+end
+
+to wiggle
+  rt 360
+  fd 0.5
+end
+
+;Possible solution:
+to hourglass
+  wiggle
+  ifelse xcor * xcor <= ycor or -1 * xcor * xcor >= ycor
+  [set color red]
+  [set color blue]
+end
+=======================
+Question 56:
+MC Question:
+What command do you have to use before using ticks?
+
+Options:
+A) reset-ticks
+B) restart-ticks
+C) start-ticks
+D) set-ticks
+
+Answer: A
+=======================
+Question 57:
+;Programming question:
+;Write a code that creates a turtle and has it draw a square with side length 5
+;
+;Description
+;1. clears-all
+;2. the created turtle can face any direction initially
+;3. the color of the turtle created does not matter
+;4. the code should be written in the context of the OBSERVER
+;
+;Possible solution:

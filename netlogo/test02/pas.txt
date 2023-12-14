@@ -1,0 +1,748 @@
+
+=======================
+Question 0:
+to origin
+  ifelse (xcor = 0) and (ycor = 0)
+  [
+  ]
+  [
+    fd 1
+    rt (random 360)
+    origin
+  ]
+end
+=======================
+Question 1:
+to horizontalLines1patchthickrandomcolorsthatwillallbecolurfulandthisfunctionwillworkyes
+ask patches with [pxcor = 0] [set pcolor random 140]
+ask patches [set pcolor [pcolor] of patch 0 pycor]
+end
+=======================
+Question 2:
+
+=======================
+Question 3:
+to stripes
+ let one random 14 * 10 + 5
+ let two random 14 * 10 + 5
+ if one = two  [
+   ifelse two = 5 [set two two + 10] [set two two - 10]
+ ]
+ ask patches with [pycor mod 2 = 0][set pcolor one]
+ ask patches with [pycor mod 2 = 1][set pcolor two]
+end
+=======================
+Question 4:
+
+=======================
+Question 5:
+to setup
+  ca
+  crt 2 [ setxy random 33 random 33 ]
+end
+
+to colorSwap
+  let colorturtle0 [color] of turtle 0
+  let colorturtle1 [color] of turtle 1
+  ask turtle 0
+  [
+    set color colorturtle1
+  ]
+  ask turtle 1
+  [
+    set color colorturtle0
+  ]
+end
+=======================
+Question 6:
+to plus
+  ask patches
+ [ if pxcor = 0
+    [set pcolor white]
+  if pycor = 0
+    [ set pcolor white]]
+end
+=======================
+Question 7:
+
+=======================
+Question 8:
+ang racket
+
+;Question 4
+(define slope
+  (lambda (y2 y1 x2 x1)
+    (/ (- y2 y1)(- x2 x1))))
+
+(slope 4 2 4 2)
+
+;Question 18
+(define avg5
+  (lambda (a b c d e)
+    (/ (+ a b c d e)5)))
+
+(avg5 5 5 4 3 3)
+
+;Question 5
+(define something
+  (lambda (a b)
+    (
+=======================
+Question 9:
+###
+;Programming question:
+; Create a checkered pattern in netlogo with a white box that changes in size in the middle. 
+;Description
+; 1 patch by 1 patch checker pattern, white box will change based on the slider. 
+;Possible solution:
+;to checkers
+;  ask patches [
+;  if pxcor mod 2 = pycor mod 2
+;    [set pcolor white]
+;  ]
+;  if pycor > -1 * boxSize and pycor < boxSize and 
+;  pxcor > -1 * boxSize and pxycor < boxSize
+; [set pcolor white]
+;end
+;#########
+=======================
+Question 10:
+to setup
+  ca
+  crt 3 [
+    set heading 000
+  ]
+  ask turtle 1 [set xcor -1]
+  ask turtle 2 [set xcor 1]
+end
+=======================
+Question 11:
+
+=======================
+Question 12:
+s not correct
+to origin
+  ifelse [xcor = 0] and [ycor = 0]
+  [
+  ]
+  [
+    fd 1
+    rt (random 360)
+    origin
+  ]
+end
+=======================
+Question 13:
+###
+;Programming question:
+;
+Create a pattern that resembles a waffle
+;
+;Possible solution:
+;to checker
+  ifelse (pxcor mod 2 = 0 and pycor mod 2 = 0)
+  [set pcolor sky]
+  [set pcolor lime]
+end
+;#########
+=======================
+Question 14:
+
+=======================
+Question 15:
+###
+;Programming question:
+;Build a procedure named colorSwapBox
+;
+;Patches within the range of 5 and -5 in both x and y can have any random color.
+;Patches outside that range but within 10 and -10 in both x and y can only be colors: red or blue
+;Patches outside of 10 and -10 range are black
+;
+;
+;Description
+;
+;Possible solution:
+;
+;#########
+=======================
+Question 16:
+###
+;Programming question:
+; Create a pattern that represents a waffle.
+;Description
+;
+;Possible solution:
+; to pattern
+; ifelse (pxcor mod 2 = 0 and pycor mod 2 = 0)
+ [ set pcolor sky]
+ [set pcolor lime]
+end
+;#########
+=======================
+Question 17:
+###
+;Programming question:
+doubleSquare
+-Draw a square
+-Draw another square inside the first square
+-Size and length don't matter
+;Description
+;
+;Possible solution:
+to doubleSquare
+  ca
+  crt 1
+  [
+    pd 
+    repeat 4 [fd 5 rt 90]
+    pu
+    fd 1
+    rt 90
+    fd 1
+    lt 90
+    pd
+    repeat 4 [fd 3 rt 90]
+  ]
+end
+  
+;#########
+=======================
+Question 18:
+
+=======================
+Question 19:
+
+=======================
+Question 20:
+to horizontalLines1patchthickrandomcolorsthatwillallbecolorfulandthisfunctionwillworkyes
+  ask patches with [pxcor = 0] [set pcolor random 140]
+  ask patches [set pcolor [pcolor] of patch 0 pycor]
+end
+=======================
+Question 21:
+#
+to house
+  ca
+  crt 1
+  [
+    set heading 90
+    pd
+    set color orange
+  ]
+  ask turtles
+  [repeat 4
+    [fd 5 rt 90]
+    fd 5
+    repeat 3
+    [lt 120 fd 5]
+  ]
+end
+=======================
+Question 22:
+to stripes
+  let one random 14 * 10 + 5
+  let two random 14 * 10 + 5
+  if one = two  [
+    ifelse two = 5 [set two two + 10] [set two two - 10]
+  ]
+  ask patches with [pycor mod 2 = 0][set pcolor one]
+  ask patches with [pycor mod 2 = 1][set pcolor two]
+end
+=======================
+Question 23:
+
+=======================
+Question 24:
+to setup
+  ca
+  crt 10 [set color green]
+  crt 100 [
+    set color yellow
+    set xcor random 33 - 16
+    set ycor random 33 - 16
+  ]
+end
+to infect
+  ask turtles with [color = green] [
+    set heading random 4 * 90
+    fd 1
+    let x xcor
+    let y ycor
+    ask turtles with [xcor = x and ycor = y] [
+      set color green
+    ]
+  ]
+end
+=======================
+Question 25:
+to colorOdds
+ ca
+ ask patches with [(pxcor mod 2 != 0) and (pycor mod 2 != 0)]
+ [set pcolor white]
+en
+=======================
+Question 26:
+
+=======================
+Question 27:
+###
+;Programming question: 
+; Write a function ``trapColors``
+
+;Description
+; Interface: ``trapColors`` button, ``corRange`` slider from 1-17, ``colors`` slider from 1-14
+; Must be in Observer Context
+; Clear Screen
+; Patches within a certain xcor and ycor range set their color to a random true color
+; The xcor and ycor range is determined by the ``corRange`` slider
+; The number of true colors available is determined by the ``colors`` slider 
+
+;Possible solution:
+to trapColors
+  ca
+  ask patches 
+  [if abs pxcor < corRange and abs pycor < corRange
+    [set pcolor (random colors) * 10 + 5]]
+end 
+;#########
+=======================
+Question 28:
+
+=======================
+Question 29:
+;##########
+Programming question:
+Write a command setup such that it creates 5 turtles with different random colors equally headed around the center
+
+Possible solution:
+;##########
+
+to setup
+  ca
+  cro 5
+end
+
+;##########
+Programming question:
+Write a program which draws a square in white
+
+
+Possible solution:
+;##########
+
+to setup
+  ca
+  crt 1
+  [
+    pd
+    set heading 0
+  ]
+end
+
+to square
+  set color white
+  repeat 4
+  [
+    fd 10
+    rt 90
+  ]
+en
+=======================
+Question 30:
+
+=======================
+Question 31:
+###
+;Programming question:
+; Divide the interface into two colors with patches
+;Description
+; Divide the interface into two colors with patches. Use the function colorStripes to do this.
+;Possible solution:
+;to colorStripes
+  set pcolor red
+  if pxcor > 0
+  [set pcolor yellow]
+ if pxcor < 0
+  [set pcolor red]
+end
+;#########
+=======================
+Question 32:
+#####
+;;Programming question:
+;;Write a function, quadrantColor, that makes makes quadrant I red, quadrant II
+;;orange, quadrant III yellow and quadrant IV green
+;;Possible solution:
+
+to quadrantColor
+  if (pxcor < 0 and pycor < 0)
+  [set pcolor yellow]
+  if (pxcor < 0 and pycor > 0)
+  [set pcolor orange]
+  if (pxcor > 0 and pycor > 0)
+  [set pcolor red]
+  if (pxcor > 0 and pycor < 0)
+  [set pcolor green]
+end
+=======================
+Question 33:
+ion:
+;Which of the following is not a property of a patch?
+;A) pycor
+;B) pxcor
+;C) color
+;D) all options are properties of a patch
+;Answer
+; C
+;#########
+
+;#########
+;Programming question:
+;Write a procedure that will clear the screen, create 5 turtles, move them forward two to five units, and set the patches they are on top of the same color as the turtle.
+;
+;Possible solution:
+;#########
+to _A
+  ca
+  crt 5
+  ask turtles
+  [fd (2 + (random 4))
+    set pcolor color]
+end
+=======================
+Question 34:
+#########
+;MC Question:
+; What is emergent behavior?
+
+;Options:
+; A) A system with complex rules that generates complex behaviors
+; B) A system with complex rules that generates simple behaviors
+; C) A system with simple rules that generates complex behaviors
+; D) A system with simple rules that generates simple behaviors
+;Answer: C
+;##########
+
+;##########
+;Programming question:
+;Create a procedure named gradient that uses the shades of pink (135, 136, 137, 138) and sets the color of the patches to one of the shades (starting from 135) every 8 patches (besides the last row, which is 9 patches).
+
+;Possible solution:
+;to gradient
+;  ask patches with [pycor > 8] [set pcolor 135]
+;  ask patches 
+;  [ if pycor > 0 and pycor < 9 [set pcolor 136] ]
+;  ask patches 
+;  [ if pycor < 1 and pycor > -8 [set pcolor 137] ]
+;  ask patches 
+;  [ if pycor < -7 and pycor >= -16 [set pcolor 138] ]
+;end 
+;##########
+=======================
+Question 35:
+to setup
+  ca
+  crt 1
+end
+
+to drawTurtle
+  ask turtles
+  [set xcor mouse-xcor
+   set ycor mouse-ycor
+    ifelse mouse-down?
+    [pd]
+    [pu]
+  ]
+end
+=======================
+Question 36:
+;
+to setup
+  ca
+  let turtleYCord 0
+  repeat 17
+  [
+  crt 1
+    [
+      set color gray
+      set heading 0
+      set ycor turtleYCord
+      set turtleYCord turtleYCord - 1
+    ]
+  ]
+end
+=======================
+Question 37:
+###
+;Programming question:
+; Create a function known as DoubleRandom that clears-all and then has every patch
+;pick a random color and then switch to another patch's color, forever button.
+;Description
+; Clear-all, give each patch a random color, have patches switch to another patch's color, forever button
+;Possible solution:
+;to DoubleRandom
+;ca
+; ask patches [set pcolor random 140]
+; wait 0.5
+; ask patches [set pcolor [pcolor] of patch (random pxcor) (random pycor)]
+; end
+;#########
+=======================
+Question 38:
+###
+;Programming question:
+;Set each column in the netlogo world to a random color (each patch with the same x coordinate should have the
+;same color and each patch with a different y coordinate should have a different color)
+;
+;Possible solution:
+;to yColor
+;  ask patches with [pycor = 0] [set pcolor (random 14) * 10 + 5]
+;  ask patches with [pycor != 0] [set pcolor [pcolor] of patch pxcor 0] 
+;end
+;#########
+=======================
+Question 39:
+###
+;Programming question:
+; Create a function known as DoubleRandom that clears-all and then has every patch
+;pick a random color and then switch to another patch's color, forever button.
+;Description
+; Clear-all, give each patch a random color, have patches switch to another patch's color, forever button
+;Possible solution:
+;to DoubleRandom
+;ca
+; ask patches [set pcolor random 140]
+; wait 0.5
+; ask patches [set pcolor [pcolor] of patch (random pxcor) (random pycor)]
+; end
+;#########
+=======================
+Question 40:
+
+=======================
+Question 41:
+;##########
+;Programming Question: Write a command called "setup" for observer that creates 15 gray turtles facing the same direction.
+;
+;Description
+;
+;Possible solution:
+to setup
+  ca
+  let turtleYCord 0
+  repeat 15 [ cro 1 ]
+  set heading 0
+  set ycor turtleYCord
+  set turtleYCOrd TurtleYCord -1
+end
+;
+;#########
+=======================
+Question 42:
+
+=======================
+Question 43:
+
+=======================
+Question 44:
+
+=======================
+Question 45:
+;to setup
+;ca
+;  ask patches with [pxcor = 0]
+;    [ set pcolor random 140 ]
+;  ask patches with [pxcor != 0]
+;    [ set pcolor [pcolor] of patch 0 pycor ]
+; end
+;
+; to rowMover
+;  ask patches with [pxcor = 0 and pycor != 16]
+;   [ set pcolor [pcolor] of patch -16 (pycor + 1) ]
+;  ask patches with [pxcor = 0 and pycor = 16]
+;    [ set pcolor [pcolor] of patch -16 -16 ]
+;  ask patches with [pxcor != 0]
+;    [ set pcolor [pcolor] of patch 0 pycor ]
+; end
+=======================
+Question 46:
+n a turtle NOT do?
+; A) Change its shape into preselected images
+; B) Move around the field
+; C) Change the color of itelf and its surroundings
+; D) Send commands to the observer
+
+;Question 2
+; A) set pcolor ___
+; B) set color ___
+; C) color = ___
+; D) pxycol = (___)
+
+;Question 3
+; Write a program that sets half of the patches on the field to red and the other to blue,
+; With a dividing black line between them.
+;Answer
+
+to half
+  set pcolor black
+  if (pxcor < 0)
+  [set pcolor red]
+  if (pxcor > 0)
+  [set pcolor blue]
+end
+=======================
+Question 47:
+to gradient
+  ask patches with [pycor > 8] [set pcolor 135]
+  ask patches
+  [ if pycor > 0 and pycor < 9 [set pcolor 136] ]
+  [ if pycor < 1 and pycor > 9 [set pcolor 137] ]
+    [ if pycor > -7 and pycor >= -16 [set pcolor 138
+  ] ]
+end
+=======================
+Question 48:
+to drawTurtle
+  ca
+  crt 1
+  ask turtles
+  [
+    pd
+    if mouse-down?
+    [set xcor mouse-xcor]
+    [set ycor mouse-ycor]
+  ]
+end
+=======================
+Question 49:
+ion: How many true netlogo colors are there?
+;Options:
+;A) 13
+;B) 14
+;C) 140
+;D) Infinitely many colors
+;Answer: B
+;#########
+
+;Programming question: Write a function called quadrantColor where each quadrant
+;should be of different color.
+;
+;Description: In this function,
+;each quadrant I, II, III, IV, should be the color red, orange, yellow, green
+;respectively. The y and x axies should be the color white.
+
+;Possible solution:
+to quadrantColor
+  if (pycor = 0)
+  [set pcolor white]
+  if (pxcor = 0)
+  [set pcolor white]
+  if (pycor > 0 and pxcor > 0)
+  [set pcolor red]
+  if (pycor > 0 and pxcor < 0)
+  [set pcolor orange]
+  if (pycor < 0  and pxcor < 0)
+  [set pcolor yellow]
+  if (pycor < 0 and pxcor > 0)
+  [set pcolor green]
+end
+=======================
+Question 50:
+
+=======================
+Question 51:
+###
+;Programming question: 
+;Create a function that creates vertical stripes, equally spaced 
+;Possible solution:
+to stripe [width]
+  ask patches [ifelse pxcor max (width + 1) = 0
+    [set pcolor pink]
+    [set pcolor cyan]
+end 
+;
+;#########
+=======================
+Question 52:
+
+=======================
+Question 53:
+;to setup
+;  ca
+;  ask patches with [pxcor = 0]
+;    [ set pcolor random 140 ]
+;  ask patches with [pxcor != 0]
+;    [ set pcolor [pcolor] of patch 0 pycor ]
+; end
+;
+; to rowMover
+;  ask patches with [pxcor = 0 and pycor != 16]
+;   [ set pcolor [pcolor] of patch -16 (pycor + 1) ]
+;  ask patches with [pxcor = 0 and pycor = 16]
+;    [ set pcolor [pcolor] of patch -16 -16 ]
+;  ask patches with [pxcor != 0]
+;    [ set pcolor [pcolor] of patch 0 pycor ]
+; end
+;##########
+=======================
+Question 54:
+to triSplit
+  set pcolor white
+  if pxcor > 5 [set pcolor red]
+  if pxcor < -5 [set pcolor blue]
+end
+=======================
+Question 55:
+
+=======================
+Question 56:
+;##########
+;Programming question:
+;
+;Make 5 turtles with different random colors, all equally facing different directions at the center
+;
+;Possible solution:
+;##########
+
+to setup 
+ ca
+ cro 5
+end
+
+;##########
+;Programming question:
+;
+;Have a turtle draw a square
+;
+;Possible solution:
+;##########
+
+to setup
+  ca
+  crt 1
+  [
+    pd
+    set heading 0
+  ]
+end
+
+to square
+  repeat 4 
+  [
+    fd 10 
+    rt 90
+  ]
+en
+=======================
+Question 57:
+to square
+  crt 1
+  ask turtles
+  [pen-down
+  repeat 4
+  [
+    fd 5
+    right 90
+  ]
+  ]
+end

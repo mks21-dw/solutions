@@ -1,0 +1,743 @@
+
+=======================
+Question 0:
+;MC Question:
+;How many named colors are there in netlogo?
+;Options:
+;A) 12
+;B) 16
+;C) 120
+;D) 140
+;Answer
+;B) 16
+=======================
+Question 1:
+;MC Question: What is the syntax for using of
+;
+;Options
+;A. [Agent] of reporter
+;B. [reporter] of agent
+;C. [with] of [agent]
+;D. [reporter] of [with]
+;Answer
+;B
+=======================
+Question 2:
+;MC Question:
+; What function is used to define a local variable
+;Options:
+;A) let
+;B) define
+;C) set
+;D) ask
+;Answer
+;A) let
+=======================
+Question 3:
+;MC Question:
+; Which command returns the number of black patches?
+;Options:
+; A count patches with [pcolor = black]
+; B count patches [with color = black]
+; C patches [color black]
+; D patches with pcolor = black
+;Answer
+; A
+=======================
+Question 4:
+;MC Question: Which color numbers represent the Netlogo True Colors?
+;
+;Options:
+;A. Numbers that end in 3
+;B. Numbers that end in 7
+;C. Numbers that end in 5
+;D. Numbers that end in 8
+;Answer
+;
+=======================
+Question 5:
+;MC Question:
+;Which one of these pen commands in plot is incorrect?
+;Options:
+;A) plot count turtles
+;B) plot count patches with [pcolor red]
+;C) plot count turtles with [ycor = xcor]
+;D) plot count patches with [pycor mod 5 = 3]
+;Answer
+;B
+=======================
+Question 6:
+;MC Question:
+;Which command would set all patches to black?
+;Options:
+;A) clear all
+;B) set all patches = black
+;C) ca
+;D) ask patches [pcolor = black]
+;Answer: C
+=======================
+Question 7:
+;MC Question:
+;A turtle has all these properties EXCEPT
+;Options:
+;A) Color
+;B) Shape
+;C) Size
+;D) Degree
+;Answer
+;D) Degree
+=======================
+Question 8:
+lang racket
+
+;Question 4
+(define slope
+  (lambda (y2 y1 x2 x1)
+    (/ (- y2 y1)(- x2 x1))))
+
+(slope 4 2 4 2)
+
+;Question 18
+(define avg5
+  (lambda (a b c d e)
+    (/ (+ a b c d e)5)))
+
+(avg5 5 5 4 3 3)
+
+;Question 5
+(define something
+  (lambda (a b)
+=======================
+Question 9:
+;MC Question:
+;What function is used to define a variable?
+;Options:
+;A) let
+;B) define
+;C) set
+;D) ask
+;Answer
+;A) let
+=======================
+Question 10:
+;MC Question:
+;Which of the following is not an agent?
+;Options:
+;A) Turtles
+;B) Patchs
+;C) Monitors
+;D) Links
+
+;Answer: C
+=======================
+Question 11:
+;MC Question:
+;What is the correct code for creating 3 ordered turtles?
+;Options:
+;A) cro 1
+;B) cro 3
+;C) crt 3
+;D) crt 1
+;Answer
+;B) cro 3
+=======================
+Question 12:
+; PRQ: Write a program that moves a turtle to the middle of the world.
+; The turtle cannot be teleported.
+; Assume the turtle is not already at the origin.
+; Assume there is already a turtle
+; Possible solution:
+=======================
+Question 13:
+;MC Question:
+Which of the following are not true?
+;Options:
+A) Turtles are specified by their who numbers
+B) Patches are identified by their coordinates
+C) n-of NUMBER AGENTS returns an agent set containing number of agents, chosen randomly
+D) AGENTS with [BOOLEAN] returns an agent set made up of all agents where the boolean evaluates to false
+
+;Answer
+Answer: Option D
+=======================
+Question 14:
+;MC Question: A turtle has all of these properties EXCEPT
+;
+;Options:
+; A) Color
+; B) Shape
+; C) Size
+; D) Degree
+;
+;Answer: D) Degree
+;
+=======================
+Question 15:
+;MC Question:
+; The following code is in turtle context. Identify an error.
+to badCode
+  wiggle
+  if abs pxcor > 10 and abs pycor > 10
+  [setxy 0 0]
+end
+;Options:
+;A. wiggle command needs brackets
+;B. abs is not valid
+;C. pxcor is not valid
+;D. > must be in prefix notation
+;Answer: C
+=======================
+Question 16:
+;MC Question:
+; Which of the following is not true?
+;Options:
+; A. Turtles are specified by their "who" number.
+; B. Patches are specified by their coordinates.
+; C. "n-of" chooses agents randomly.
+; D. "with" returns an agent set where boolean equals false.
+;Answer
+; D. "with" returns an agent set where boolean equals false.
+=======================
+Question 17:
+;MC Question:
+;What is the correct code for creating 3 ordered turtles?
+;Options:
+;A) cro 1
+;B) cro 3
+;C) crt 3
+;D) crt 1
+;Answer
+;B) cro 3
+=======================
+Question 18:
+;MC Question: Which color numbers represent the netlogo true colors
+;
+;Options:
+;A) Numbers that end in 3
+;B) Numbers that end in 7
+;C) Numbers that end in 5
+;D) Numbers that end in 8
+;
+;Answer: C
+;
+=======================
+Question 19:
+;MC Question:
+;What is a local variable
+;Options:
+;A. An agent
+;B. A variable that can be used anywhere
+;C. A variable that can only be used in one part of your code
+;D. A variable that is owned by an agent
+;Answer
+;C. A variable that can only be used in one part of your code
+=======================
+Question 20:
+;MC Question: What is the syntax for using of
+;
+;Options: A. [agent] of reporter B. [reporter] of agent C. [with] of [agent] D. reporter of [agent]
+;
+;Answer: B
+;
+=======================
+Question 21:
+;MC Question:
+;Which of the following is not a valid netlogo procedure? Assume observer context.
+;backgroundColor and diamond are both local variables.
+;Options:
+;A) let random 140 backgroundColor
+;B) let diamond [neighbors] of patch 4 -7
+;C) ask patches with [count neighbors with [pcolor != red] < 3] [set pcolor red]
+;D) ask turtle 4 [fd 10]
+;
+;Answer: A
+=======================
+Question 22:
+;MC Question:
+; Which command returns the number of black patches?
+;Options:
+; A count patches with [pcolor = black]
+; B count patches [with color = black]
+; C patches [color black]
+; D patches with pcolor = black
+;Answer
+; A
+=======================
+Question 23:
+;MC Question:
+;What does ask expect?
+;Options:
+;A) an agent and command block
+;B) a number and agent
+;C) an agent and agentset
+;D) a command block and a number
+;Answer
+;A
+=======================
+Question 24:
+;MC Question:
+;What does the command "back who" do in turtle context.
+;Options:
+;A)Makes turtle output their who value
+;B)Makes them move backwards by their who value
+;C)Makes them move backwards by global variable who if who exists
+;D)Makes them move down by their who value
+;Answer
+;
+=======================
+Question 25:
+MC Question:
+What does ask expect?
+Options:
+A) an agent and command block
+B) a number and agent
+C) an agent and agent set
+D) a command block and a number
+
+Answer: D
+=======================
+Question 26:
+;MC Question:
+;What is a local variable?
+;
+;Options:
+;A. An agent
+;B. A variable that can be used anywhere.
+;C. A variable that can only be used in one part of your code.
+;D. A variable that is owned by an agent.
+;Answer
+;C. A variable that can only be used in one part of your code.
+;
+=======================
+Question 27:
+;MC Question:
+; The following code is in turtle context. Identify an error.
+to badcode
+  rt (random 360) fd 1
+  if abs pxcor > 10 and abs pycor > 10
+  [setxy 0 0]
+end
+
+;Options:
+; A: wiggle needs surrounding brackets
+; B: abs is not a valid command
+; C: pxcor is not a valid turtle property
+; D: > must be in prefix notation
+
+;Answer
+; C
+=======================
+Question 28:
+;MC Question: Which of the following is not an agent?
+;
+;Options:
+;A) Turtle
+;B) Patch
+;C) Observer
+;D) Slider
+;Answer: D
+=======================
+Question 29:
+MC Question:
+What context can you use ca in?
+
+Options:
+A) observer
+B) patches
+C) turtles
+D) links
+
+Answer: A
+=======================
+Question 30:
+;MC Question:
+;How do you set the background to be red in the observer context?
+;Options:
+;A) ask bg [set pcolor red]
+;B) set pcolor red
+;C) ask patches [set pcolor red]
+;D) ask patches set pcolor red
+;Answer: C
+=======================
+Question 31:
+;MC Question:
+; Which is not an example of an agent in NetLogo?
+;Options
+; A: Observer
+; B: Turtles
+; C: Patches
+; D: Stamps
+;Answer
+; D: Stamps
+=======================
+Question 32:
+;MC Question:
+;How many true netlogo colors are there?
+;Options:
+;A) 5
+;B) 18
+;C) 140
+;D) 14
+;
+;Answer: D
+;
+=======================
+Question 33:
+;MC Question:
+;Which of the following is not a property of a patch?
+;A) pycor
+;B) pxcor
+;C) color
+;D) all options are properties of a patch
+;Answer
+; C
+;#########
+
+;#########
+;Programming question:
+;Write a procedure that will clear the screen, create 5 turtles, move them forward two to five units, and set the patches they are on top of the same color as the turtle.
+;
+;Possible solution:
+;#########
+to _A
+  ca
+  crt 5
+  ask turtles
+  [fd (2 + (random 4))
+    set pcolor color]
+end
+=======================
+Question 34:
+##########
+;MC Question:
+; What is emergent behavior?
+
+;Options:
+; A) A system with complex rules that generates complex behaviors
+; B) A system with complex rules that generates simple behaviors
+; C) A system with simple rules that generates complex behaviors
+; D) A system with simple rules that generates simple behaviors
+;Answer: C
+;##########
+
+;##########
+;Programming question:
+;Create a procedure named gradient that uses the shades of pink (135, 136, 137, 138) and sets the color of the patches to one of the shades (starting from 135) every 8 patches (besides the last row, which is 9 patches).
+
+;Possible solution:
+;to gradient
+;  ask patches with [pycor > 8] [set pcolor 135]
+;  ask patches
+;  [ if pycor > 0 and pycor < 9 [set pcolor 136] ]
+;  ask patches
+;  [ if pycor < 1 and pycor > -8 [set pcolor 137] ]
+;  ask patches
+;  [ if pycor < -7 and pycor >= -16 [set pcolor 138] ]
+;end
+;#########
+=======================
+Question 35:
+;MC Question:
+;Which of these statements is false?
+;Options:
+;(A)A local variable is also called a scope.
+;(B)Emergence is when a system made of complex parts has simple rules.
+;(C)A local variable is only accesible within the smallest code block that has the variable.
+;(D)Emergent behavior is the basis of many computer science algotrithms, such as AI.
+;Answer
+;
+=======================
+Question 36:
+;MC Question:
+;How do you run a command for turtles?
+;Options:
+;A) create a button in context turtle
+;B) change the command center context from observer to turtles
+;C) ask turtles
+;D) all of the above
+;
+;Answer: D
+=======================
+Question 37:
+;MC Question: How would you isolate a single patch in NetLogo?
+;Options:
+; A. ask patches
+; B. [xcor] of patch x y
+; C. patch x y
+; D. patches with pcolor = white
+;Answer
+;C
+=======================
+Question 38:
+;MC Question:
+;What's the difference between n-of and one-of?
+;Options:
+;A) They're the same
+;B) one-of can only be used for non-agent-sets
+;C) n-of doesn't work on sets
+;D) n-of lets you choose how many values from a list are chosen
+;Answer
+;D
+=======================
+Question 39:
+;MC Question: How would you isolate a single patch in NetLogo?
+;Options:
+; A. ask patches
+; B. [xcor] of patch x y
+; C. patch x y
+; D. patches with pcolor = white
+;Answer
+;C
+=======================
+Question 40:
+;MC Question:
+;Which one of the following will give you an error in observer context?
+;
+;Options:
+;A) ask patches [set pcolor white]
+;B) crt 12 set heading 120
+;C) crt 12 [set pcolor red]
+;D) ask turtle 0 0 [set pcolor 5]
+;
+;Answer
+;B
+=======================
+Question 41:
+;MCQ: How do you run a command for turtles?
+;
+A. create a button in context turtle
+B. change the command center context from observer too turtles
+C. ask turtles
+D. all of the above
+;
+;Answer: D. all of the above
+;
+=======================
+Question 42:
+;MC Question:
+; What's the difference between one-of and n-of
+;Options:
+; A) They're the same
+; B) one-of can be only used for non-agent sets
+; C) n-of doesn't work on sets
+; D) n-of lets you choose how many values from a set are chosen
+;Answer
+; D
+=======================
+Question 43:
+;MC Question:
+;what does n-of stand for ?
+;Options:
+;a) none of
+;b) number of
+;c) nine of
+;d) one of
+;Answer
+;b) number of
+=======================
+Question 44:
+;MC Question:
+;ask patches [set pcolor [pcolor] of one-of neighbor]
+;what is wrong with this line?
+;Options:
+;A: pcolor should not be in brackets
+;B: Ask is not necessary
+;C: There is no term in Netlogo called neighbor
+;D: There is nothing wrong with it
+;Answer
+;C
+=======================
+Question 45:
+;MC Question:
+;Fill in the black for the following procedure that sets 50 patches to the color pink:
+; to pinkpatches
+;    ask ___ 50 patches
+;    [set pcolor pink]
+; end
+;Options:
+; A) repeat
+; B) random
+; C) (count patches)
+; D) n-of
+;Answer
+; D
+=======================
+Question 46:
+1
+;What can a turtle NOT do?
+; A) Change its shape into preselected images
+; B) Move around the field
+; C) Change the color of itelf and its surroundings
+; D) Send commands to the observer
+
+;Question 2
+; A) set pcolor ___
+; B) set color ___
+; C) color = ___
+; D) pxycol = (___)
+
+;Question 3
+; Write a program that sets half of the patches on the field to red and the other to blue,
+; With a dividing black line between them.
+;Answer
+
+to half
+  set pcolor black
+  if (pxcor < 0)
+  [set pcolor red]
+  if (pxcor > 0)
+  [set pcolor blue]
+end
+=======================
+Question 47:
+;MC Question: What is emergent behavior?
+;Options:
+; A) a system with complex rules that generates complex behaviors
+; B) a system with complex rules that generates simple behaviors
+; C) a system with simple rules that generates complex behavior
+; D) a system with simple rules that generates simple behavior
+;Answer: C
+=======================
+Question 48:
+;MC Question: Which of these statements is false ?
+;
+;Options:
+;a. A local variable is also called a scope.
+;b. Emergence is when a system made of complex parts has simple rules.
+;c. A local variable is only accessible within the smallest code block that has the local variable.
+;d. Emergent behavior is the basis of many computer science algorithms, such as AI.
+;
+;Answer
+;b. Emergence is when a system made of complex parts has simple rules.
+=======================
+Question 49:
+;MC Question: How many true netlogo colors are there?
+;Options:
+;A) 13
+;B) 14
+;C) 140
+;D) Infinitely many colors
+;Answer: B
+;#########
+
+;Programming question: Write a function called quadrantColor where each quadrant
+;should be of different color.
+;
+;Description: In this function,
+;each quadrant I, II, III, IV, should be the color red, orange, yellow, green
+;respectively. The y and x axies should be the color white.
+
+;Possible solution:
+to quadrantColor
+  if (pycor = 0)
+  [set pcolor white]
+  if (pxcor = 0)
+  [set pcolor white]
+  if (pycor > 0 and pxcor > 0)
+  [set pcolor red]
+  if (pycor > 0 and pxcor < 0)
+  [set pcolor orange]
+  if (pycor < 0  and pxcor < 0)
+  [set pcolor yellow]
+  if (pycor < 0 and pxcor > 0)
+  [set pcolor green]
+end
+=======================
+Question 50:
+;MC Question:
+; The following code is in observer context.
+; ask patches [set pcolor [pcolor] of one-of neighbor
+; what is wrong with this line of code?
+;Options:
+;A: pcolor should not be in brackets.
+;B: ask is not necessary.
+;C: there is no term in netlogo called neighbor.
+;D: there is nothing wrong with it
+;Answer
+; C
+=======================
+Question 51:
+;MC Question:
+; Which of the following will give you an error in obsever context?
+;Options:
+; A: ask patches [ set pcolor blue ]
+; B: crt 12 set heading 120
+; C: crt 12 [ set pcolor red ]
+; D: ask turtle 0 5 [ set pcolor 5 ]
+;Answer: A
+;
+=======================
+Question 52:
+;MC Question:
+;The plot only progresses based on ____ .
+;Options:
+; A) seconds passed
+; B) ticks passed
+; C) Whenever you want
+; D) As soon as you run the code
+;Answer
+; B) ticks passed
+=======================
+Question 53:
+;MC Question:
+;Fill in the black for the following procedure that sets 50 patches to the color pink:
+; to pinkpatches
+;    ask ___ 50 patches
+;    [set pcolor pink]
+; end
+;Options:
+; A) repeat
+; B) random
+; C) (count patches)
+; D) n-of
+;Answer
+; D
+=======================
+Question 54:
+;MC Question:
+;Which of the following is not an agent in Netlogo?
+;
+;Options:
+;A. Patches
+;B. Turtles
+;C. Observer
+;D. Colors
+;
+;Answer: D
+;
+=======================
+Question 55:
+;MC Question:
+; What is emergent behavior?
+;Options:
+;A) A non intuitive consequence derived from a combination of events
+;B) Behavior that emerges from code
+;C) Behavior that you can intuit from given facts
+;D) Behavior that stems from universal maxims
+;Answer
+;A) A non intuitive consequence derived from a combination of events
+=======================
+Question 56:
+MC Question:
+What context can you use ca in?
+
+Options:
+A) observer
+B) patches
+C) turtles
+D) links
+
+Answer: A
+=======================
+Question 57:
+;MC Question:
+;What is the general command to change the color of a patch in NetLogo
+;
+;Options:
+;(A) set pcolor ____
+;(B) set color ____
+;(C) set pcolor-xy
+;(D) set color-xy
+;
+;Answer
+;(A)
