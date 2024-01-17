@@ -144,14 +144,6 @@ patches-own [property]
 ---
 
 #### Q15
-A cellular automata model has the following rules:
-
-1. States: on (green), off (red)
-2. Neighborhood: All 8 neighbors
-3. State change rules:
-   - Off patches with an even number of On neighbors turn on
-   - On patches always turn off
-
 ```
 patches-own [onNeighbors]
 
@@ -185,11 +177,20 @@ end
 ---
 
 #### Q17
-Create an observer context procedure named `colorAdaptation` with a parameter called `threshold`. This procedure should perform the following steps:
+```
+patches-own [avgNeighbor]
 
-1. For each patch, calculate the average `pcolor` of its neighbors and store it in a custom property called `avgNeighbor`.
-2. After setting `avgNeighbor` for all patches, compare the absolute difference between each patch's `pcolor` and `avgNeighbor`.
-3. If the absolute difference is below the given threshold, set the patch color to black; otherwise, set it to white.
+to colorAdaption [threshold]
+  ask patches [
+    set avgNeighbor mean [pcolor] of neighbors
+  ]
+  ask patches [
+    ifelse (abs (pcolor - avgNeighbor) < threshold)
+    [ set pcolor black ]
+    [ set pcolor white ]
+  ]
+end
+```
 
 ---
 
