@@ -121,16 +121,13 @@ Answer: `'(-2 2 3)`
 ---
 
 #### Q13
-Write a recursive Racket function named `harmonicSeries` that calculates the sum of the harmonic series up to the nth term. The harmonic series is defined as:
-
-$$ H(n) = \frac{1}{n} + ... + \frac{1}{4} + \frac{1}{3} + \frac{1}{2} + 1 $$
-
-where H(1) = 1
-
----
-
-#### Q14
-Write a Racket function named `findMiddleTerm` that takes a list of numbers as input and returns the middle term. If there are two middle terms, the function should return their average. Assume the list has at least 1 value in it.
+```
+(define harmonicSeries
+  (lambda (n)
+    (if (= n 1)
+        1
+        (+ (/ 1 n) (harmonicSeries (- n 1))))))
+```
 
 ---
 

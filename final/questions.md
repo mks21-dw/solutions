@@ -168,17 +168,26 @@ $$ H(n) = \frac{1}{n} + ... + \frac{1}{4} + \frac{1}{3} + \frac{1}{2} + 1 $$
 
 where H(1) = 1
 
----
-
-#### Q14
-Write a Racket function named `findMiddleTerm` that takes a list of numbers as input and returns the middle term. If there are two middle terms, the function should return their average. Assume the list has at least 1 value in it.
 
 ---
 
 ### NetLogo Questions
 
-#### Q15
+#### Q14
 How do you add custom attributes to turtles? To a patch?
+
+---
+
+#### Q15
+A cellular automata model has the following rules:
+
+1. States: on (green), off (red)
+2. Neighborhood: All 8 neighbors
+3. State change rules:
+   - Off patches with an even number of On neighbors turn on
+   - On patches always turn off
+
+Write a procedure that would run one generation of this model. If you need to add any properties, include code for that as well.
 
 ---
 
