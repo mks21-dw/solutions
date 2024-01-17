@@ -1,6 +1,7 @@
 
 ### Racket Questions
 
+#### Q0
 What is the result of the following function call:
 
 `(foldl (lambda (a b) (- b (* 3 a))) 0 '(1 2 3 4))`
@@ -12,6 +13,7 @@ What is the result of the following function call:
 
 ---
 
+#### Q1
 Given the following function definition:
 
 ```
@@ -34,6 +36,7 @@ What is the result of calling the following function with the argument `(mystery
 
 ---
 
+#### Q2
 Consider the following Racket code snippet:
 
 ```
