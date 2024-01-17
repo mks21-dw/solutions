@@ -59,77 +59,63 @@ Answer: 15
 ---
 
 #### Q7
-Given :
-```
-(define a 3)
-(define b 10)
-(define c −3)
-```
 
-Evaluate:
-1. `(* b (if (= (abs c) a) a c))`
-2. `(* b (if (zero? c) −1 1))`
-3. `((if (not(= a b c)) * /) a b)`
+1. Answer: 30
+2. Answer: 10
+3. Answer: 30
 
 ---
 
 #### Q8
-Write the Racket function for `(xor-3 a b c)` where `a`, `b`, and `c` are boolean values and the function produces a true value when one and only of its inputs is true:
-
-- `(xor-3 #t #f #f)` -> `#t`
-- `(xor-3 #f #f #t)` -> `#t`
-- `(xor-3 #t #f #t)` -> `#f`
-- `(xor-3 #t #t #t)` -> `#f`
-- `(xor-3 #f #f #f)` -> `#f`
+```
+(define xor3
+  (lambda (p q r)
+    (if (or p q r)
+        (if (or (and p q)
+                (and p r)
+                (and q r))
+            #false
+            #true)
+        #false)))
+```
+Explanation: `(or p q r)` ensures that at least one of the parameters is `#true`. The three `and` functions check if any pair of the inputs are both `#true`. If none of those `and` functions are `#true`, then exactly one of the parameters must be `#true`.
 
 ---
 
 #### Q9
-Given:
-
-```
-(define foo
-  (lambda (x y)
-      (if (< x y)
-          x
-         (foo (− x y) y))))
-```
-
-1. Evaluate `(foo 7 10)`
-2. Evaluate `(foo 10 7)`
+1. Answer: 7
+2. Answer: 3
 
 ---
 
 #### Q10
-Evaluate `(filter (lambda(x) (> (abs x) 1)) '(−2 −1 0 1 2 3))`
+Answer: `'(-2 2 3)`
 
 ---
 
 #### Q11
-Your favorite dog walker charges according to your dog’s weight. If your dog
-weighs under 15 pounds, the walker charges $35. If your dog weighs between 15 and 40
-pounds, inclusive, she charges $40. If your dog is over 40 pounds, she charges $40, plus an
-additional $2 for each pound over 40 pounds. Write a function that can be invoked like
-`(dogwalkCost w)` which returns the amount owed to the dog walker depending on the weight
-of the dog.
-
-- `(dogwalkCost 32)` → `40`
-- `(dogwalkCost 46)` → `52`
+```
+(define dogwalkCost
+  (lambda (w)
+    (if (< w 15)
+        35
+        (if (<= w 40)
+            40
+            (+ 40 (* 2 (- w 40)))))))
+```
 
 ---
 
 #### Q12
-Write the function `(manhattan-distance L1 L2)` to compute the sum of the distances between the corresponding items in lists `L1` and `L2`. Assume both `L1` and `L2` have the same length and contain only numbers.
-
-Example function calls:
-
 ```
-(manhattan-distance '() '()) = 0
-(manhattan-distance '(4) '(5)) = |4 - 5| = 1
-(manhattan-distance '(1 2 3) '(4 5 0))
-			= |1 - 4| + |2 - 5| + |3 - 0|
- 			= 3 + 3 + 3
-	= 9
+(define manhattan-distance
+  (lambda (L1 L2)
+    (if (null? L1)
+        0
+        (+ (abs (- (first L1)
+                   (first L2)))
+           (manhattan-distance (rest L1)
+                              (rest L2)))
 ```
 
 ---
