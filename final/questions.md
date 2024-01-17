@@ -60,7 +60,11 @@ What will be the result of calling `(recursive-function 5)`
 
 ---
 
-Write a Racket function named `calculate-distance` that takes four parameters representing two coordinates (x1, y1) and (x2, y2). The function should return the Euclidean distance between the two coordinates. Recall that
+Write a Racket function named `calculate-distance` that takes four parameters representing two coordinates (x1, y1) and (x2, y2). The function should return the Euclidean distance between the two coordinates. The distance between two points is calculated as:
+
+$$ \sqrt{(x2-x1)^2 + (y2 - y1)^2} $$
+
+---
 
 
 Write a Racket function, documentation, and unit tests for a recursive Racket function called (secondToLast L) that returns the second-to-last item from a list (L) of two or more items.
