@@ -148,6 +148,7 @@ Example function calls:
 ---
 
 Write a recursive Racket function named `harmonicSeries` that calculates the sum of the harmonic series up to the nth term. The harmonic series is defined as:
+
 $$ H(n) = \frac{1 n} + ... + \frac{1 4} $$
   + 1/3 + 1/2 + 1 where H(1) = 1"
 
