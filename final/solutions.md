@@ -22,23 +22,39 @@ Answer: 15
 ---
 
 #### Q4
-Write a function called `DigitsDivBy10` that takes a single value representing a 2 digit positive integer and returns `#true` if the sum of the digits is divisible by ten and `#false` otherwise.
+```
+(define DigitsDivBy10
+  (lambda (n)
+    (= 0
+       (remainder (+
+                   (quotient n 10)
+                   (remainder n 10))
+                  10))))
+```
 
-examples:
-- `(DigitsDivBy10 23)` ==> `#false`
-- `(DigitsDivBy10 37)` ==> `#true"`
 
 ---
 
 #### Q5
-Write a Racket function named `calculate-distance` that takes four parameters representing two coordinates (x1, y1) and (x2, y2). The function should return the Euclidean distance between the two coordinates. The distance between two points is calculated as:
-
-$$ \sqrt{(x2-x1)^2 + (y2 - y1)^2} $$
+```
+(define calculate-distance
+  (lambda (x1 y1 x2 y2)
+    (sqrt (+ (expt (- x2 x1) 2)
+             (expt (- y2 y1) 2)))))
+```
 
 ---
 
 #### Q6
-Write a Racket function and test cases for a recursive Racket function called `(secondToLast L)` that returns the second-to-last item from a list (L) of two or more items.
+```
+(define secondToLast
+  (lambda (L)
+    (if (null? (rest (rest L)))
+        (first L)
+        (secondToLast (rest L)))))
+(secondToLast '(1 2))
+(secondToLast '(1 2 3 4))
+```
 
 ---
 
