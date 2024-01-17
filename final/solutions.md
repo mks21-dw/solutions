@@ -133,8 +133,42 @@ Answer: `'(-2 2 3)`
 
 ### NetLogo Questions
 
-#### Q15
+#### Q14
 How do you add custom attributes to turtles? To a patch?
+
+```
+turtles-own [property]
+patches-own [property]
+```
+
+---
+
+#### Q15
+A cellular automata model has the following rules:
+
+1. States: on (green), off (red)
+2. Neighborhood: All 8 neighbors
+3. State change rules:
+   - Off patches with an even number of On neighbors turn on
+   - On patches always turn off
+
+```
+patches-own [onNeighbors]
+
+to run
+    ask patches [
+        set onNeighbors count neighbors with [pcolor = green]
+    ]
+    ask patches [
+        ifelse (pcolor = green)
+        [ set pcolor red ]
+        [
+            if (onNeighbors mod 2 = 0)
+            [ set pcolor green ]
+        ]   
+    ]
+end
+```
 
 ---
 
