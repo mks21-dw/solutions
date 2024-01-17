@@ -195,54 +195,39 @@ end
 ---
 
 #### Q18
-What will be the output when the following NetLogo code is run?
-```
-let x 8
-let greater-than-ten x > 10
-show greater-than-ten
-```
+Answer: `false`
 
 ---
 
 
 #### Q19
-Consider the following NetLogo code snippet:
-
-```
-ask turtles [
-  ifelse xcor > 0 [
-    set color red
-  ] [
-    set color blue
-  ]
-]
-```
-What will be the outcome of this code? Explain.
+Answer: All the turtles on the right side of the world will be red. All the turtles on the left side (including the middle) will be blue.
 
 ---
 
 #### Q20
-Consider the following NetLogo code snippet:
-
-```
-ask turtle 0 [
-  setxy 10 5
-  set heading 0
-  fd 8
-  lt 90
-  fd 5
-  rt 180
-  fd 12
-]
-```
-
-After executing this code, what will be the final coordinates of the turtle?"
+Answer: (-16, 13)
 
 ---
 
 #### Q21
-Write a NetLogo procedure called `trickCoin` that reports 0 (for heads) 5/8 times or 1 (for tails) 3/8 times.
+```
+to-report trickCoin
+    ifelse (random 8 < 5)
+    [report 0]
+    [report 1]
+end
 
-Write a NetLogo procedure called `display` that asks all patches to run `trickCoin` and sets their `pcolor` to red for heads and blue for tails.
+to display
+    ask patches [
+        ifelse (trickCoin == 0)
+        [ set pcolor red ]
+        [ ser pcolor blue ]
+    ]
+end
 
-Write a NetLogo procedure called `countHeads` that reports the number of patches that returned heads after calling `trickCoin` and `display`.
+
+to-report countHeads
+    report count patches with [pcolor = red]
+end
+```
