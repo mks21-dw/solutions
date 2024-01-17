@@ -1,0 +1,227 @@
+
+### Racket Questions
+
+What is the result of the following function call:
+
+`(foldl (lambda (a b) (- b (* 3 a))) 0 '(1 2 3 4))`
+
+1. 7
+2. -30
+3. 15
+4. -9
+
+---
+
+Given the following function definition:
+
+```
+(define mystery (lambda (a)
+  (if (< a 5)
+      'small
+      (if (< a 10)
+          'medium
+          (if (< a 15)
+              'large
+              'extra-large)))))
+```
+
+What is the result of calling the following function with the argument `(mystery 8)`?
+
+1. 'small
+2. 'medium
+3. 'large
+4. 'extra-large
+
+---
+
+Consider the following Racket code snippet:
+
+```
+(define evaluate-function (lambda (x)
+  (if (even? x)
+      (* x 2)
+      (+ x 1))))
+```
+
+What will be the result of calling `(evaluate-function 3)`
+
+---
+
+Consider the following recursive Racket function:
+
+```
+(define recursive-function (lambda (n)
+  (if (= n 0)
+      0
+      (+ n (recursive-function (- n 1))))))
+```
+
+What will be the result of calling `(recursive-function 5)`
+
+---
+
+Write a Racket function named `calculate-distance` that takes four parameters representing two coordinates (x1, y1) and (x2, y2). The function should return the Euclidean distance between the two coordinates. Recall that
+
+
+Write a Racket function, documentation, and unit tests for a recursive Racket function called (secondToLast L) that returns the second-to-last item from a list (L) of two or more items.
+"Given :
+(define a 3)
+(define b 10)
+(define c −3)
+
+Evaluate:
+(1)    (* b (if (= (abs c) a) a c))
+(2)    (* b (if (zero? c) −1 1))
+(3)    ((if (not(= a b c)) * /) a b)"
+
+Write the Racket function for (xor-3 a b c) where a, b, and c are boolean values and the function produces a true value when one and only of its inputs is true:
+(xor-3 #t #f #f) -> #t
+(xor-3 #f #f #t) -> #t
+(xor-3 #t #f #t) -> #f
+(xor-3 #t #t #t) -> #f
+(xor-3 #f #f #f) -> #f"
+"Given: Integer Integer −> Integer
+
+(define foo
+    (lambda (x y)
+        (if (< x y)
+            x
+           (foo (− x y) y))))
+
+(1)     Evaluate (foo 7 10)
+(2)     Evaluate (foo 10 7)"
+Evaluate (filter (lambda(x) (> (abs x) 1)) ’(−2 −1 0 1 2 3))
+"Your favorite dog walker charges according to your dog’s weight. If your dog
+weighs under 15 pounds, the walker charges $35. If your dog weighs between 15 and 40
+pounds, inclusive, she charges $40. If your dog is over 40 pounds, she charges $40, plus an
+additional $2 for each pound over 40 pounds. Write a function that can be invoked like
+(dogwalkCost w) which returns the amount owed to the dog walker depending on the weight
+of the dog.
+(dogwalkCost 32) → 40
+(dogwalkCost 46) → 52
+
+Write the function (manhattan-distance L1 L2) to compute the sum of the distances between the corresponding items in lists L1 and L2. Assume both L1 and L2 have the same length and contain only numbers. You may use the (distance a b) function written in class.
+
+Example function call:
+    (manhattan-distance '() '()) = 0
+    (manhattan-distance '(4) '(5)) = |4 - 5| = 1
+    (manhattan-distance '(1 2 3) '(4 5 0))
+    			= |1 - 4| + |2 - 5| + |3 - 0|
+     			= 3 + 3 + 3
+			= 9
+    ;; List -> Number
+    ;; Assume L1 and L2 contain only numbers.
+    ;; Assume L1 and L2 have the same length.
+
+(define manhattan-distance
+    	    (lambda (L1 L2)"
+
+"Write the predicate function (is-point? x) to identify whether x represents a point in a two dimensional coordinate system. (10 points)
+
+    Example function calls:
+       (is-point? '()) -> false
+       (is-point? '(1 2)) -> true
+       (is-point? '(1 2 3)) -> false
+       (is-point? '(a b)) -> false
+       (is-point? 3) -> false
+
+   ;; Data -> Boolean
+   (define is-point?
+           (lambda (x)
+
+
+Write the predicate function (all-points? L) that takes a list and identifies whether the list contains only 2 dimensional points. You may use the (is-point? x) function written in part (A). Assume it works correctly. (15 points)
+
+     Example function calls:
+                  (all-points? '()) -> true
+             (all-points? '((1 2) (3 4) (5 6))) -> true
+             (all-points? '( 1 2 3)) -> false
+
+     ;; List -> Boolean
+     (define all-points?
+                  (lambda (L)
+
+### NetLogo Questions
+
+How do you add custom attributes to turtles? To a patch?
+
+
+Write a function called DigitsDivBy10 that takes a single value representing a 2 digit positive integer and returns #true if the sum of the digits is divisible by ten.
+
+examples: (DigitsDivBy10 23) ==> #false (DigitsDivBy10 37) ==> #true"
+
+"Write a turtle context procedure called danceSteps, which should instruct a turtle to:
+
+1.  Rotate randomly by a number of degrees in the range [-45, 45].
+2.  Move forward 1 or 2 steps.
+3.  If the turtle is facing north, set its color to a random shade of blue.
+4.  If the turtle is facing south, set its color to a random shade of red."
+"Create an observer context procedure named colorAdaptation with a parameter called threshold. This procedure should perform the following steps:
+
+1. For each patch, calculate the average pcolor of its neighbors and store it in a custom property called avgNeighbor.
+2. After setting avgNeighbor for all patches, compare the absolute difference between each patch's pcolor and avgNeighbor.
+3. If the absolute difference is below the given threshold, set the patch color to black; otherwise, set it to white."
+Indicate the correct Racket prefix notation for the following mathematical expression: (72 + 73 - 8 / 1 * 4)
+"What will be the output when the following NetLogo code is run?
+let x 8
+let greater-than-ten x > 10
+show greater-than-ten"
+"Write a recursive Racket function named harmonicSeries that calculates the sum of the harmonic series up to the nth term. The harmonic series is defined as:
+H(n) = 1/n + ... + 1/4 + 1/3 + 1/2 + 1 where H(1) = 1"
+Write a Racket function named findMiddleTerm that takes a list of numbers as input and returns the middle term. If there are two middle terms, the function should return their average.
+"Consider the following NetLogo code snippet:
+
+ask turtles [
+  ifelse xcor > 0 [
+    set color red
+  ] [
+    set color blue
+  ]
+]
+What will be the outcome of this code? Explain."
+
+
+
+
+What will be the result of calling recursive-function with the argument 5?"
+Write a Netlogo function that asks all Turtles to wiggle.
+"ask turtles [
+  setxy 10 5
+  set heading 0
+  fd 8
+  lt 90
+  fd 5
+  rt 180
+  fd 12
+]
+
+After executing this code, what will be the final coordinates of the turtle?"
+
+
+Assuming that the turtle as a random heading, write a NetLogo expression that is equivalent to lt 60
+
+
+
+Consider the code:
+to setup
+  resize-world 0 9 0 9
+  ask n-of 10 patches
+  [
+    sprout 1
+    [
+      set color one-of [red yellow blue]
+    ]
+  ]
+end
+
+(1)  How many patches exist in this world?
+(2)  How many turtles exist in this world?
+(3)  What is the probability that all turtles are red?
+(4)  What is the probability that one of the turtles is located at the origin?
+(5)  What is the probability that one of the turtles is located at the origin and its color is blue?"
+"Write a NetLogo procedure called trickCoin that returns 0 (for heads) 5/8 times or 1 (for tails) 3/8 times.
+
+Write a NetLogo procudure called display that asks all patches to run trickCoin and display the result as their plabel.
+
+Write a NetLogo procedure called countHeads that reports the number of patches with 0 as the plabel."
+Write the setup, countNeighbors, and transition procedures for a majority CA model.
