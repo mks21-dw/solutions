@@ -155,7 +155,7 @@ A cellular automata model has the following rules:
 ```
 patches-own [onNeighbors]
 
-to run
+to go
     ask patches [
         set onNeighbors count neighbors with [pcolor = green]
     ]
@@ -173,13 +173,15 @@ end
 ---
 
 #### Q16
-Write a turtle context procedure called `danceSteps`, which should instruct a turtle to:
-
-1.  Rotate randomly by a number of degrees in the range [-45, 45].
-2.  Move forward 1 or 2 steps, chosen randomly.
-3.  If the turtle is facing towards the top half of the world, set its color to a random shade of blue.
-4.  If the turtle is facing towards the bottom half of the world, set its color to a random shade of red.
-
+```
+to danceSteps
+  rt random 91 - 45
+  fd random 2 + 1
+  ifelse (heading < 90 or heading > 270)
+  [ set color blue - 4 + random 9 ]
+  [ set color red - 4 + random 9 ]
+end
+```
 ---
 
 #### Q17
